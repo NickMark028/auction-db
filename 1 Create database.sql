@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS `User`
     `email`				VARCHAR(128) UNIQUE NOT NULL,
     `dateOfBirth`		DATE NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
-    `updatedAt`			TIMESTAMP NOT NULL,
+    `updatedAt`			TIMESTAMP,
     
     PRIMARY KEY(`id`)
 );
@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `Seller`
 (
 	`id`				BIGINT,
     `expiredTime`		TIMESTAMP NOT NULL,
-    `active`			BOOL NOT NULL DEFAULT FALSE,
+    `active`			BOOL NOT NULL DEFAULT TRUE,
     
     PRIMARY KEY(`id`)
 );
@@ -62,15 +62,15 @@ CREATE TABLE IF NOT EXISTS `Product`
 	`id`				BIGINT AUTO_INCREMENT,
     `sellerId`			BIGINT NOT NULL,
     `name`				VARCHAR(256) CHARACTER SET utf8mb4 NOT NULL,
+    `description`		VARCHAR(8192) CHARACTER SET utf8mb4 NOT NULL,
     `reservedPrice`		FLOAT NOT NULL,
     `priceStep`			FLOAT NOT NULL,
     `instantPrice`		FLOAT NOT NULL,
-    `desciption`		VARCHAR(8192) CHARACTER SET utf8mb4 NOT NULL,
     `isRenewal`			BOOL NOT NULL,
     `coverImageURL`		VARCHAR(2048) NOT NULL,
     `timeExpired`		TIMESTAMP NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
-    `updatedAt`			TIMESTAMP NOT NULL,
+    `updatedAt`			TIMESTAMP,
     
     PRIMARY KEY(`id`)
 );
@@ -84,6 +84,7 @@ CREATE TABLE IF NOT EXISTS `BiddedProduct`
     `auctionLogCount`	INT NOT NULL DEFAULT 0,
     `bidderCount`		INT NOT NULL DEFAULT 0,
     `remainingTime`		FLOAT NOT NULL,
+    `statusCode`		BIGINT NOT NULL DEFAULT 100,
     
     PRIMARY KEY(`id`)
 );
@@ -105,6 +106,15 @@ CREATE TABLE IF NOT EXISTS `ProductCategory`
     PRIMARY KEY(`productId`, `categoryId`)
 );
 
+CREATE TABLE IF NOT EXISTS `BiddedProductStatus`
+(
+	`id`				BIGINT,
+	`name`				VARCHAR(256) NOT NULL,
+    
+    PRIMARY KEY(`id`)
+);
+
+
 CREATE TABLE IF NOT EXISTS `ProductImage`
 (
 	`id`				BIGINT AUTO_INCREMENT,
@@ -114,13 +124,20 @@ CREATE TABLE IF NOT EXISTS `ProductImage`
     PRIMARY KEY(`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `Evaluation`
+CREATE TABLE IF NOT EXISTS `MessageToSeller`
 (
-	`id`				BIGINT AUTO_INCREMENT,
-    `msgToBidder`		VARCHAR(1024) CHARACTER SET utf8mb4,
-    `msgToSeller`		VARCHAR(1024) CHARACTER SET utf8mb4,
-    `scoreToBidder`		BIGINT NOT NULL DEFAULT 0,
-    `scoreToSeller`		BIGINT NOT NULL DEFAULT 0,
+	`id`				BIGINT,
+    `message`			VARCHAR(1024) CHARACTER SET utf8mb4,
+    `score`				BIGINT NOT NULL DEFAULT 0,
+    
+    PRIMARY KEY(`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `MessageToBidder`
+(
+	`id`				BIGINT,
+    `message`			VARCHAR(1024) CHARACTER SET utf8mb4,
+    `score`				BIGINT NOT NULL DEFAULT 0,
     
     PRIMARY KEY(`id`)
 );
@@ -160,19 +177,18 @@ CREATE TABLE IF NOT EXISTS `ChangeRoleLog`
 	`id`				BIGINT AUTO_INCREMENT,
 	`bidderId`			BIGINT NOT NULL,
 	`message`			VARCHAR(1024) CHARACTER SET utf8mb4,
-    `statusCode`		BIGINT,
+    `statusCode`		BIGINT DEFAULT 100,
     `replier`			BIGINT,
     `timeReplied`		TIMESTAMP,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
-    `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
     
     PRIMARY KEY(`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `StatusCode`
+CREATE TABLE IF NOT EXISTS `ChangeRoleStatus`
 (
 	`id`				BIGINT,
-	`name`				VARCHAR(1024) NOT NULL,
+	`name`				VARCHAR(256) NOT NULL,
     
     PRIMARY KEY(`id`)
 );
@@ -185,7 +201,6 @@ ALTER TABLE `User` AUTO_INCREMENT = 1000001;
 ALTER TABLE `ChangeRoleLog` AUTO_INCREMENT = 1000001;
 ALTER TABLE `Product` AUTO_INCREMENT = 1000001;
 ALTER TABLE `ProductImage` AUTO_INCREMENT = 1000001;
-ALTER TABLE `Evaluation` AUTO_INCREMENT = 1000001;
 ALTER TABLE `Category` AUTO_INCREMENT = 1;
 
 
@@ -204,7 +219,7 @@ ALTER TABLE `ChangeRoleLog`
 ADD FOREIGN KEY `FK_CRL_B`(`bidderId`)
 	REFERENCES `Bidder`(`id`),
 ADD FOREIGN KEY `FK_CRL_SC`(`statusCode`)
-	REFERENCES `StatusCode`(`id`),
+	REFERENCES `ChangeRoleStatus`(`id`),
 ADD FOREIGN KEY `FK_CRL_A`(`replier`)
 	REFERENCES `Admin`(`id`);
     
@@ -229,10 +244,10 @@ ADD FOREIGN KEY `FK_PI_P`(`productId`)
 ALTER TABLE `BiddedProduct`
 ADD FOREIGN KEY `FK_BD_P`(`id`)
 	REFERENCES `Product`(`id`),
-ADD FOREIGN KEY `FK_BD_B1`(`topBidderId`)
+ADD FOREIGN KEY `FK_BD_B`(`topBidderId`)
 	REFERENCES `Bidder`(`id`),
-ADD FOREIGN KEY `FK_BD_B2`(`bidderOwnerId`)
-	REFERENCES `Bidder`(`id`);
+ADD FOREIGN KEY `FK_BD_BPS`(`statusCode`)
+	REFERENCES `BiddedProductStatus`(`id`);
     
 ALTER TABLE `WatchList`
 ADD FOREIGN KEY `FK_WL_B`(`bidderId`)
@@ -252,8 +267,12 @@ ADD FOREIGN KEY `FK_BB_B`(`bidderId`)
 ADD FOREIGN KEY `FK_BB_BP`(`productId`)
 	REFERENCES `BiddedProduct`(`id`);
 
-ALTER TABLE `Evaluation`
-ADD FOREIGN KEY `FK_E_BP`(`id`)
+ALTER TABLE `MessageToSeller`
+ADD FOREIGN KEY `FK_MTS_BP`(`id`)
+	REFERENCES `BiddedProduct`(`id`);    
+    
+ALTER TABLE `MessageToBidder`
+ADD FOREIGN KEY `FK_MTB_BP`(`id`)
 	REFERENCES `BiddedProduct`(`id`);    
     
     
