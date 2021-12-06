@@ -202,6 +202,7 @@ UPDATE `ChangeRoleLog` CRL SET CRL.`statusCode` = 300 WHERE CRL.`id` = 1000009;
 SELECT * FROM `ChangeRoleLog`;
 SELECT * FROM `Seller`;
 
+
 /*********************************************************/
 /* PRODUCT + BIDDED_PRODUCT + PRODUCT_IMAGE */
 /*********************************************************/
@@ -256,5 +257,12 @@ VALUES
     (1000006, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
     (1000006, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
 SELECT * FROM `ProductImage`;
+
+
+/*********************************************************/
+/* PRODUCT_CATEGORY */
+/*********************************************************/
+INSERT INTO `ProductCategory`(`productId`, `categoryId`)
+VALUE (1000001, 1);
 
 

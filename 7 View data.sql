@@ -14,3 +14,6 @@ SELECT * FROM `ChangeRoleLog`;
 SELECT * FROM `SellerView`;
 
 SELECT * FROM `ProductView`;
+SELECT * FROM `ProductCategory`;
+
+
