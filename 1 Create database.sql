@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `Admin`
 
 CREATE TABLE IF NOT EXISTS `Bidder`
 (
-	`id`				BIGINT AUTO_INCREMENT,
+	`id`				BIGINT,
     `address`			VARCHAR(256) UNIQUE NOT NULL,
     `verifed`			BOOL NOT NULL DEFAULT FALSE,
     `score`				INT NOT NULL DEFAULT 10,
@@ -94,7 +94,7 @@ CREATE TABLE IF NOT EXISTS `ProductCategory`
 
 CREATE TABLE IF NOT EXISTS `ProductImage`
 (
-	`id`				BIGINT,
+	`id`				BIGINT AUTO_INCREMENT,
 	`productId`			BIGINT NOT NULL,
     `url`				VARCHAR(2048) NOT NULL,
     
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS `ProductImage`
 
 CREATE TABLE IF NOT EXISTS `Evaluation`
 (
-	`id`				BIGINT,
+	`id`				BIGINT AUTO_INCREMENT,
     `msgToBidder`		VARCHAR(1024) CHARACTER SET utf8mb4,
     `msgToSeller`		VARCHAR(1024) CHARACTER SET utf8mb4,
     `scoreToBidder`		BIGINT NOT NULL DEFAULT 0,
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS `BlockedBidder`
 
 CREATE TABLE IF NOT EXISTS `ChangeRoleLog`
 (
-	`id`				BIGINT,
+	`id`				BIGINT AUTO_INCREMENT,
 	`bidderId`			LONG NOT NULL,
 	`message`			VARCHAR(1024) CHARACTER SET utf8mb4,
     `statusCode`		BIGINT,
@@ -164,3 +164,16 @@ CREATE TABLE IF NOT EXISTS `StatusCode`
     
     PRIMARY KEY(`biddedProduct`, `bidderId`)
 );
+
+
+/*********************************************************/
+/* SET UP STARTING INCREMENT VALUE */
+/*********************************************************/
+ALTER TABLE `User` AUTO_INCREMENT = 1000001;
+ALTER TABLE `ChangeRoleLog` AUTO_INCREMENT = 1000001;
+ALTER TABLE `Product` AUTO_INCREMENT = 1000001;
+ALTER TABLE `ProductImage` AUTO_INCREMENT = 1000001;
+ALTER TABLE `Evaluation` AUTO_INCREMENT = 1000001;
+ALTER TABLE `Category` AUTO_INCREMENT = 1;
+
+
