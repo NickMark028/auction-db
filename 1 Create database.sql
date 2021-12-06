@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `Admin`
 CREATE TABLE IF NOT EXISTS `Bidder`
 (
 	`id`				BIGINT,
-    `address`			VARCHAR(256) UNIQUE NOT NULL,
+    `address`			VARCHAR(256) NOT NULL,
     `verifed`			BOOL NOT NULL DEFAULT FALSE,
     `score`				INT NOT NULL DEFAULT 10,
     `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
@@ -71,6 +71,19 @@ CREATE TABLE IF NOT EXISTS `Product`
     `timeExpired`		TIMESTAMP NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     `updatedAt`			TIMESTAMP NOT NULL,
+    
+    PRIMARY KEY(`id`)
+);
+
+CREATE TABLE IF NOT EXISTS `BiddedProduct`
+(
+	`id`				BIGINT,
+    `topBidderId`		BIGINT,
+    `bidderOwnerId`		BIGINT,
+    `currentPrice`		FLOAT NOT NULL,
+    `auctionLogCount`	INT NOT NULL DEFAULT 0,
+    `bidderCount`		INT NOT NULL DEFAULT 0,
+    `remainingTime`		FLOAT NOT NULL,
     
     PRIMARY KEY(`id`)
 );
@@ -135,17 +148,17 @@ CREATE TABLE IF NOT EXISTS `AuctionLog`
 
 CREATE TABLE IF NOT EXISTS `BlockedBidder`
 (
-	`biddedProduct`		BIGINT,
 	`bidderId`			BIGINT,
+	`productId`			BIGINT,
 	`createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     
-    PRIMARY KEY(`biddedProduct`, `bidderId`)
+    PRIMARY KEY(`bidderId`, `productId`)
 );
 
 CREATE TABLE IF NOT EXISTS `ChangeRoleLog`
 (
 	`id`				BIGINT AUTO_INCREMENT,
-	`bidderId`			LONG NOT NULL,
+	`bidderId`			BIGINT NOT NULL,
 	`message`			VARCHAR(1024) CHARACTER SET utf8mb4,
     `statusCode`		BIGINT,
     `replier`			BIGINT,
@@ -158,11 +171,10 @@ CREATE TABLE IF NOT EXISTS `ChangeRoleLog`
 
 CREATE TABLE IF NOT EXISTS `StatusCode`
 (
-	`biddedProduct`		BIGINT,
-	`bidderId`			BIGINT,
-	`createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
+	`id`				BIGINT,
+	`name`				VARCHAR(1024) NOT NULL,
     
-    PRIMARY KEY(`biddedProduct`, `bidderId`)
+    PRIMARY KEY(`id`)
 );
 
 
@@ -177,3 +189,71 @@ ALTER TABLE `Evaluation` AUTO_INCREMENT = 1000001;
 ALTER TABLE `Category` AUTO_INCREMENT = 1;
 
 
+/*********************************************************/
+/* ADD FOREIGN KEYS */
+/*********************************************************/
+ALTER TABLE `Admin`
+ADD FOREIGN KEY `FK_A_U`(`id`)
+	REFERENCES `User`(`id`);
+
+ALTER TABLE `Bidder`
+ADD FOREIGN KEY `FK_B_U`(`id`)
+	REFERENCES `User`(`id`);
+
+ALTER TABLE `ChangeRoleLog`
+ADD FOREIGN KEY `FK_CRL_B`(`bidderId`)
+	REFERENCES `Bidder`(`id`),
+ADD FOREIGN KEY `FK_CRL_SC`(`statusCode`)
+	REFERENCES `StatusCode`(`id`),
+ADD FOREIGN KEY `FK_CRL_A`(`replier`)
+	REFERENCES `Admin`(`id`);
+    
+ALTER TABLE `Seller`
+ADD FOREIGN KEY `FK_S_B`(`id`)
+	REFERENCES `Bidder`(`id`);
+
+ALTER TABLE `Product`
+ADD FOREIGN KEY `FK_P_S`(`sellerId`)
+	REFERENCES `Seller`(`id`);
+
+ALTER TABLE `ProductCategory`
+ADD FOREIGN KEY `FK_PC_C`(`productId`)
+	REFERENCES `Product`(`id`),
+ADD FOREIGN KEY `FK_PC_P`(`categoryId`)
+	REFERENCES `Category`(`id`);
+    
+ALTER TABLE `ProductImage`
+ADD FOREIGN KEY `FK_PI_P`(`productId`)
+	REFERENCES `Product`(`id`);    
+
+ALTER TABLE `BiddedProduct`
+ADD FOREIGN KEY `FK_BD_P`(`id`)
+	REFERENCES `Product`(`id`),
+ADD FOREIGN KEY `FK_BD_B1`(`topBidderId`)
+	REFERENCES `Bidder`(`id`),
+ADD FOREIGN KEY `FK_BD_B2`(`bidderOwnerId`)
+	REFERENCES `Bidder`(`id`);
+    
+ALTER TABLE `WatchList`
+ADD FOREIGN KEY `FK_WL_B`(`bidderId`)
+	REFERENCES `Bidder`(`id`),
+ADD FOREIGN KEY `FK_WL_BP`(`productId`)
+	REFERENCES `BiddedProduct`(`id`);
+    
+ALTER TABLE `AuctionLog`
+ADD FOREIGN KEY `FK_AL_B`(`bidderId`)
+	REFERENCES `Bidder`(`id`),
+ADD FOREIGN KEY `FK_AL_BP`(`productId`)
+	REFERENCES `BiddedProduct`(`id`);
+    
+ALTER TABLE `BlockedBidder`
+ADD FOREIGN KEY `FK_BB_B`(`bidderId`)
+	REFERENCES `Bidder`(`id`),
+ADD FOREIGN KEY `FK_BB_BP`(`productId`)
+	REFERENCES `BiddedProduct`(`id`);
+
+ALTER TABLE `Evaluation`
+ADD FOREIGN KEY `FK_E_BP`(`id`)
+	REFERENCES `BiddedProduct`(`id`);    
+    
+    
