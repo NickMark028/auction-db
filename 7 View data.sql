@@ -15,5 +15,13 @@ SELECT * FROM `SellerView`;
 
 SELECT * FROM `ProductView`;
 SELECT * FROM `ProductCategory`;
+SELECT * FROM `ProductImage`;
+
+SELECT * FROM `WatchList`;
+SELECT * FROM `AuctionLog`;
+SELECT * FROM `BlockedBidder`;
+
+SELECT * FROM `MessageToSeller`;
+SELECT * FROM `MessageToBidder`;
 
 
