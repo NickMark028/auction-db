@@ -44,7 +44,8 @@ CREATE TABLE IF NOT EXISTS `Bidder`
     `verifed`			BOOL NOT NULL DEFAULT FALSE,
     `score`				INT NOT NULL DEFAULT 10,
     `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
-    
+	`refreshToken`		VARCHAR(512),
+
     PRIMARY KEY(`id`)
 );
 
@@ -79,11 +80,9 @@ CREATE TABLE IF NOT EXISTS `BiddedProduct`
 (
 	`id`				BIGINT,
     `topBidderId`		BIGINT,
-    `bidderOwnerId`		BIGINT,
     `currentPrice`		FLOAT NOT NULL,
     `auctionLogCount`	INT NOT NULL DEFAULT 0,
     `bidderCount`		INT NOT NULL DEFAULT 0,
-    `remainingTime`		FLOAT NOT NULL,
     `statusCode`		BIGINT NOT NULL DEFAULT 100,
     
     PRIMARY KEY(`id`)
@@ -178,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `ChangeRoleLog`
 	`bidderId`			BIGINT NOT NULL,
 	`message`			VARCHAR(1024) CHARACTER SET utf8mb4,
     `statusCode`		BIGINT DEFAULT 100,
-    `replier`			BIGINT,
+    `adminId`			BIGINT,
     `timeReplied`		TIMESTAMP,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     
@@ -220,7 +219,7 @@ ADD FOREIGN KEY `FK_CRL_B`(`bidderId`)
 	REFERENCES `Bidder`(`id`),
 ADD FOREIGN KEY `FK_CRL_SC`(`statusCode`)
 	REFERENCES `ChangeRoleStatus`(`id`),
-ADD FOREIGN KEY `FK_CRL_A`(`replier`)
+ADD FOREIGN KEY `FK_CRL_A`(`adminId`)
 	REFERENCES `Admin`(`id`);
     
 ALTER TABLE `Seller`

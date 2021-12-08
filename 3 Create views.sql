@@ -21,5 +21,5 @@ AS
 DROP VIEW IF EXISTS `ProductView`;
 CREATE VIEW `ProductView`
 AS
-	SELECT	P.*, BP.`topBidderId`, BP.`bidderOwnerId`, BP.`currentPrice`, BP.`auctionLogCount`, BP.`bidderCount`, BP.`remainingTime`
+	SELECT	P.*, BP.`topBidderId`, BP.`currentPrice`, BP.`auctionLogCount`, BP.`bidderCount`
 	FROM	`Product` P JOIN `BiddedProduct` BP ON P.`id` = BP.`id`;
