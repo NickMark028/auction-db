@@ -208,12 +208,129 @@ SELECT * FROM `Seller`;
 /*********************************************************/
 INSERT INTO `Product`(`sellerId`, `name`, `description`, `reservedPrice`, `priceStep`, `instantPrice`, `isRenewal`, `coverImageURL`, `timeExpired`)
 VALUES
-    (1000051, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/17/637647989512049638_asus-vivobook-a515-bac-1.jpg', '2021-12-31'),
-    (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/17/637647989512049638_asus-vivobook-a515-bac-1.jpg', '2021-12-31'),
-    (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/17/637647989512049638_asus-vivobook-a515-bac-1.jpg', '2021-12-31'),
-    (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/17/637647989512049638_asus-vivobook-a515-bac-1.jpg', '2021-12-31'),
-    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/17/637647989512049638_asus-vivobook-a515-bac-1.jpg', '2021-12-31'),
-    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/17/637647989512049638_asus-vivobook-a515-bac-1.jpg', '2021-12-31');
+    (1000051, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'ACER Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'MSI Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'DELL Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'HP Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'MACBOOK Laptop', 'Laptop not suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'MSI Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'ACER Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'DELL Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'HP Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'MSI Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'DELL Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'ASUS Laptop', 'Laptop suitable for gaming', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
+    (1000053, 'Samsung Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Motorola Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Apple Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Microsoft Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Razer Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Apple Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Samsung Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Oppo Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Xiaomi Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Apple Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Samsung Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Apple Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Oppo Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Xiaomi Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Microsoft Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Motorola Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Nokia Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Apple Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000052, 'Samsung Mobile', 'Mobile suitable for calling', 1500, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Apple Mobile', 'Mobile suitable for calling', 1500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/42/251703/oppo-a95-4g-bac-2-600x600.jpg', '2021-12-31'),
+    (1000053, 'Canon Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'GoPro Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Canon Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Nikon Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Canon Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'GoPro Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Canon Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'Apple Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Samsung Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'Canon Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Apple Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Nikin Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000052, 'Casio Camera', 'Camera suitable for photographer', 1500, 100, 5000, FALSE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Sony Camera', 'Camera suitable for photographer', 1500, 100, 5000, TRUE, 'https://cdn.nguyenkimmall.com/images/thumbnails/180/180/detailed/641/10030503-may-anh-fujifilm-x-a3-kit-16-50mm-s-bac-1.jpg', '2021-12-31'),
+    (1000053, 'Pink Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Red Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Green Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Blue Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Brown Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Purple Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Black Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Yellow Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'White Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Pink Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Blue Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Oragne Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Black Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Pink Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Blue Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'White Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Red Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Pink Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Blue Dress', 'Dress suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Green Dress', 'Dress suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Red Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Green Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Brown Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Black Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Brown Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'White Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Yellow Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Green Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Brown Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Red Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Blue Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Green Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Yellow Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Pink Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000052, 'Orange Boot', 'Boot suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'Black Boot', 'Boot suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
+    (1000053, 'White Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Red Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Green Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Blue Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Black Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Pink Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Yellow Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'White Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Blue Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Black Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Red Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Green Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Blue Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Yellow Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Brown Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Pink Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Purple Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Brown Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000052, 'Black Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'White Pant', 'Pant suitable for beauty', 1500, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
+    (1000053, 'Blue Pant', 'Pant suitable for beauty', 1500, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31')
+	
+	;
 SELECT * FROM `Product`;
 
 INSERT INTO `BiddedProduct`(`id`, `currentprice`, `remainingTime`)
@@ -223,39 +340,722 @@ VALUES
     (1000003, 1500, 3*24*3600),
     (1000004, 1500, 3*24*3600),
     (1000005, 1500, 3*24*3600),
-    (1000006, 1500, 3*24*3600);
+    (1000006, 1500, 3*24*3600),
+    (1000007, 1500, 3*24*3600),
+    (1000008, 1500, 3*24*3600),
+    (1000009, 1500, 3*24*3600),
+    (1000010, 1500, 3*24*3600),
+    (1000011, 1500, 3*24*3600),
+    (1000012, 1500, 3*24*3600),
+    (1000013, 1500, 3*24*3600),
+    (1000014, 1500, 3*24*3600),
+    (1000015, 1500, 3*24*3600),
+    (1000016, 1500, 3*24*3600),
+    (1000017, 1500, 3*24*3600),
+    (1000018, 1500, 3*24*3600),
+    (1000019, 1500, 3*24*3600),
+    (1000020, 1500, 3*24*3600),
+    (1000021, 1500, 3*24*3600),
+    (1000022, 1500, 3*24*3600),
+    (1000023, 1500, 3*24*3600),
+    (1000024, 1500, 3*24*3600),
+    (1000025, 1500, 3*24*3600),
+    (1000026, 1500, 3*24*3600),
+    (1000027, 1500, 3*24*3600),
+    (1000028, 1500, 3*24*3600),
+    (1000029, 1500, 3*24*3600),
+    (1000030, 1500, 3*24*3600),
+    (1000031, 1500, 3*24*3600),
+    (1000032, 1500, 3*24*3600),
+    (1000033, 1500, 3*24*3600),
+    (1000034, 1500, 3*24*3600),
+    (1000035, 1500, 3*24*3600),
+    (1000036, 1500, 3*24*3600),
+    (1000037, 1500, 3*24*3600),
+    (1000038, 1500, 3*24*3600),
+    (1000039, 1500, 3*24*3600),
+    (1000040, 1500, 3*24*3600),
+    (1000041, 1500, 3*24*3600),
+    (1000042, 1500, 3*24*3600),
+    (1000043, 1500, 3*24*3600),
+    (1000044, 1500, 3*24*3600),
+    (1000045, 1500, 3*24*3600),
+    (1000046, 1500, 3*24*3600),
+    (1000047, 1500, 3*24*3600),
+    (1000048, 1500, 3*24*3600),
+    (1000049, 1500, 3*24*3600),
+    (1000050, 1500, 3*24*3600),
+    (1000051, 1500, 3*24*3600),
+    (1000052, 1500, 3*24*3600),
+    (1000053, 1500, 3*24*3600),
+    (1000054, 1500, 3*24*3600),
+    (1000055, 1500, 3*24*3600),
+    (1000056, 1500, 3*24*3600),
+    (1000057, 1500, 3*24*3600),
+    (1000058, 1500, 3*24*3600),
+    (1000059, 1500, 3*24*3600),
+    (1000060, 1500, 3*24*3600),
+    (1000061, 1500, 3*24*3600),
+    (1000062, 1500, 3*24*3600),
+    (1000063, 1500, 3*24*3600),
+    (1000064, 1500, 3*24*3600),
+    (1000065, 1500, 3*24*3600),
+    (1000066, 1500, 3*24*3600),
+    (1000067, 1500, 3*24*3600),
+    (1000068, 1500, 3*24*3600),
+    (1000069, 1500, 3*24*3600),
+    (1000070, 1500, 3*24*3600),
+    (1000071, 1500, 3*24*3600),
+    (1000072, 1500, 3*24*3600),
+    (1000073, 1500, 3*24*3600),
+    (1000074, 1500, 3*24*3600),
+    (1000075, 1500, 3*24*3600),
+    (1000076, 1500, 3*24*3600),
+    (1000077, 1500, 3*24*3600),
+    (1000078, 1500, 3*24*3600),
+    (1000079, 1500, 3*24*3600),
+    (1000080, 1500, 3*24*3600),
+    (1000081, 1500, 3*24*3600),
+    (1000082, 1500, 3*24*3600),
+    (1000083, 1500, 3*24*3600),
+    (1000084, 1500, 3*24*3600),
+    (1000085, 1500, 3*24*3600),
+    (1000086, 1500, 3*24*3600),
+    (1000087, 1500, 3*24*3600),
+    (1000088, 1500, 3*24*3600),
+    (1000089, 1500, 3*24*3600),
+    (1000090, 1500, 3*24*3600),
+    (1000091, 1500, 3*24*3600),
+    (1000092, 1500, 3*24*3600),
+    (1000093, 1500, 3*24*3600),
+    (1000094, 1500, 3*24*3600),
+    (1000095, 1500, 3*24*3600),
+    (1000096, 1500, 3*24*3600),
+    (1000097, 1500, 3*24*3600),
+    (1000098, 1500, 3*24*3600),
+    (1000099, 1500, 3*24*3600),
+    (1000100, 1500, 3*24*3600),
+    (1000101, 1500, 3*24*3600),
+    (1000102, 1500, 3*24*3600),
+    (1000103, 1500, 3*24*3600),
+    (1000104, 1500, 3*24*3600),
+    (1000105, 1500, 3*24*3600),
+    (1000106, 1500, 3*24*3600),
+    (1000107, 1500, 3*24*3600),
+    (1000108, 1500, 3*24*3600),
+    (1000109, 1500, 3*24*3600),
+    (1000110, 1500, 3*24*3600),
+    (1000111, 1500, 3*24*3600),
+    (1000112, 1500, 3*24*3600),
+    (1000113, 1500, 3*24*3600),
+    (1000114, 1500, 3*24*3600),
+    (1000115, 1500, 3*24*3600),
+    (1000116, 1500, 3*24*3600),
+    (1000117, 1500, 3*24*3600),
+    (1000118, 1500, 3*24*3600),
+    (1000119, 1500, 3*24*3600),
+    (1000120, 1500, 3*24*3600);
 SELECT * FROM `BiddedProduct`;
-
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000001, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000001, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000001, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
+    (1000001, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000001, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000001, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000002, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000002, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000002, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
+    (1000002, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000002, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000002, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000003, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000003, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000003, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
+    (1000003, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000003, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000003, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000004, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000004, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000004, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
+    (1000004, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000004, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000004, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000005, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000005, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000005, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
+    (1000005, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000005, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000005, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000006, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000006, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg'),
-    (1000006, 'https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2021/8/18/637648737584508137_asus-vivobook-m513-bac-oled-1.jpg');
+    (1000006, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000006, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000006, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000007, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000007, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000007, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000008, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000008, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000008, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000009, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000009, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000009, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000010, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000010, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000010, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000011, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000011, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000011, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000012, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000012, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000012, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000013, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000013, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000013, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000014, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000014, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000014, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000015, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000015, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000015, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000016, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000016, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000016, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000017, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000017, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000017, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000018, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000018, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000018, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000019, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000019, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000019, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000019, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000019, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000019, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000020, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000020, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn'),
+    (1000020, 'https://cf.shopee.vn/file/53a694025f4a1e6729e6e99d69a3617a_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000021, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000021, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000021, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000022, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000022, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000022, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000023, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000023, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000023, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000024, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000024, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000024, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000025, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000025, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000025, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000026, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000026, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000026, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000027, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000027, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000027, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000028, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000028, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000028, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000029, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000029, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000029, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000030, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000030, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000030, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000031, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000031, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000031, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000032, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000032, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000032, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000033, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000033, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000033, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000034, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000034, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000034, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000035, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000035, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000035, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000036, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000036, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000036, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000037, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000037, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000037, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000038, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000038, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000038, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000039, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000039, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000039, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000040, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000040, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn'),
+    (1000040, 'https://cf.shopee.vn/file/bb93d30d208c99cd7b86424c2d42162f_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000041, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000041, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000041, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000042, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000042, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000042, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000043, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000043, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000043, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000044, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000044, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000044, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000045, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000045, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000045, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000046, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000046, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000046, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000047, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000047, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000047, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000048, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000048, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000048, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000049, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000049, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000049, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000050, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000050, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000050, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000051, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000051, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000051, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000052, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000052, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000052, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000053, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000053, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000053, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000054, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000054, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000054, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000055, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000055, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000055, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000056, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000056, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000056, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000057, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000057, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000057, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000058, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000058, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000058, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000059, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000059, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000059, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000060, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000060, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn'),
+    (1000060, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000061, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000061, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000061, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000062, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000062, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000062, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000063, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000063, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000063, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000064, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000064, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000064, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000065, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000065, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000065, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000066, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000066, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000066, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000067, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000067, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000068, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000069, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000069, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000069, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000070, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000070, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000070, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000071, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000071, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000071, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000072, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000072, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000072, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000073, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000073, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000073, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000074, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000074, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000074, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000075, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000075, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000075, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000076, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000076, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000076, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000077, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000077, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000077, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000078, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000078, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000078, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000079, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000079, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000079, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000080, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000080, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
+    (1000090, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000081, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000081, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000081, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000082, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000082, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000082, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000083, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000083, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000083, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000084, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000084, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000084, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000085, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000085, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000085, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000086, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000086, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000086, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000087, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000087, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000087, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000088, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000088, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000088, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000089, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000089, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000089, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000090, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000090, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000090, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000091, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000091, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000091, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000092, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000092, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000092, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000093, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000093, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000093, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000094, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000094, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000094, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000095, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000095, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000095, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000096, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000096, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000096, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000097, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000097, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000097, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000098, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000098, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000098, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000099, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000099, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000099, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000100, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000100, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
+    (1000100, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000101, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000101, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000101, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000102, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000102, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000102, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000103, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000103, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000103, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000104, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000104, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000104, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000105, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000105, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000105, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000106, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000106, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000106, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000107, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000107, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000107, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000108, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000108, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000108, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000109, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000109, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000109, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000110, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000110, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000110, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000111, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000111, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000111, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000112, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000112, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000112, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000113, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000113, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000113, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000114, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000114, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000114, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000115, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000115, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000115, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000116, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000116, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000116, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000117, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000117, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000117, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000118, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000118, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000118, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000119, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000119, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000119, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
+INSERT INTO `ProductImage`(`productId`, `url`)
+VALUES
+    (1000120, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000120, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
+    (1000120, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
 SELECT * FROM `ProductImage`;
 
 
@@ -263,6 +1063,124 @@ SELECT * FROM `ProductImage`;
 /* PRODUCT_CATEGORY */
 /*********************************************************/
 INSERT INTO `ProductCategory`(`productId`, `categoryId`)
-VALUE (1000001, 1);
+VALUES (1000001, 1),
+ (1000002, 1),
+ (1000003, 1),
+ (1000004, 1),
+ (1000005, 1),
+ (1000006, 1),
+ (1000007, 1),
+ (1000008, 1),
+ (1000009, 1),
+ (1000010, 1),
+ (1000011, 1),
+ (1000012, 1),
+ (1000013, 1),
+ (1000014, 1),
+ (1000015, 1),
+ (1000016, 1),
+ (1000017, 1),
+ (1000018, 1),
+ (1000019, 1),
+ (1000020, 2),
+ (1000021, 2),
+ (1000022, 2),
+ (1000023, 2),
+ (1000024, 2),
+ (1000025, 2),
+ (1000026, 2),
+ (1000027, 2),
+ (1000028, 2),
+ (1000029, 2),
+ (1000030, 2),
+ (1000031, 2),
+ (1000032, 2),
+ (1000033, 2),
+ (1000034, 2),
+ (1000035, 2),
+ (1000036, 2),
+ (1000037, 2),
+ (1000038, 2),
+ (1000039, 2),
+ (1000040, 2),
+ (1000041, 3),
+ (1000042, 3),
+ (1000043, 3),
+ (1000044, 3),
+ (1000045, 3),
+ (1000046, 3),
+ (1000047, 3),
+ (1000048, 3),
+ (1000049, 3),
+ (1000050, 3),
+ (1000051, 3),
+ (1000052, 3),
+ (1000053, 3),
+ (1000054, 3),
+ (1000055, 3),
+ (1000056, 3),
+ (1000057, 3),
+ (1000058, 3),
+ (1000059, 3),
+ (1000060, 3),
+ (1000061, 3),
+ (1000062, 4),
+ (1000063, 4),
+ (1000064, 4),
+ (1000065, 4),
+ (1000066, 4),
+ (1000067, 4),
+ (1000068, 4),
+ (1000069, 4),
+ (1000070, 4),
+ (1000071, 4),
+ (1000072, 4),
+ (1000073, 4),
+ (1000074, 4),
+ (1000075, 4),
+ (1000076, 4),
+ (1000077, 4),
+ (1000078, 4),
+ (1000079, 4),
+ (1000080, 4),
+ (1000081, 5),
+ (1000082, 5),
+ (1000083, 5),
+ (1000084, 5),
+ (1000085, 5),
+ (1000086, 5),
+ (1000087, 5),
+ (1000088, 5),
+ (1000089, 5),
+ (1000090, 5),
+ (1000091, 5),
+ (1000092, 5),
+ (1000093, 5),
+ (1000094, 5),
+ (1000095, 5),
+ (1000096, 5),
+ (1000097, 5),
+ (1000098, 5),
+ (1000100, 6),
+ (1000101, 6),
+ (1000102, 6),
+ (1000103, 6),
+ (1000104, 6),
+ (1000105, 6),
+ (1000106, 6),
+ (1000107, 6),
+ (1000108, 6),
+ (1000110, 6),
+ (1000111, 6),
+ (1000112, 6),
+ (1000113, 6),
+ (1000114, 6),
+ (1000115, 6),
+ (1000116, 6),
+ (1000117, 6),
+ (1000118, 6),
+ (1000119, 6),
+ (1000120, 6);
+
 
 
