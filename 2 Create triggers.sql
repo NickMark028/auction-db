@@ -18,6 +18,7 @@ BEGIN
 			SET		S.`active` = TRUE
 			WHERE	S.`id` = NEW.`bidderId`;
 		END IF;
+	-- (NOT DONE)
 	-- ELSEIF NEW.`statusCode` = 201 THEN
 	-- BEGIN
 	-- 	-- Inform the user
@@ -89,7 +90,7 @@ BEGIN
     -- Increase the number of `positiveCount` or `negativeCount` for the Seller
     IF (NEW.`score` = 1) THEN
 		UPDATE	`Bidder` SB
-		SET		SB.`positive` = SB.`positive` + 1
+		SET		SB.`positiveCount` = SB.`positiveCount` + 1
         WHERE	SB.`id` = sellerId;
     ELSEIF (NEW.`score` = -1) THEN
 		UPDATE	`Bidder` SB
@@ -117,7 +118,7 @@ BEGIN
     -- Increase the number of `positiveCount` or `negativeCount` for the Bidder
     IF (NEW.`score` = 1) THEN
 		UPDATE	`Bidder` B
-		SET		B.`positive` = B.`positive` + 1
+		SET		B.`positiveCount` = B.`positiveCount` + 1
         WHERE	B.`id` = bidderId;
     ELSEIF (NEW.`score` = -1) THEN
 		UPDATE	`Bidder` B

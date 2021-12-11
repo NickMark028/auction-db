@@ -42,7 +42,8 @@ CREATE TABLE IF NOT EXISTS `Bidder`
 	`id`				BIGINT,
     `address`			VARCHAR(256) NOT NULL,
     `verifed`			BOOL NOT NULL DEFAULT FALSE,
-    `score`				INT NOT NULL DEFAULT 10,
+    `positiveCount`     INT NOT NULL DEFAULT 0,
+    `negativeCount`     INT NOT NULL DEFAULT 0,
     `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
 	`refreshToken`		VARCHAR(512),
 
@@ -63,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `Product`
 	`id`				BIGINT AUTO_INCREMENT,
     `sellerId`			BIGINT NOT NULL,
     `name`				VARCHAR(256) CHARACTER SET utf8mb4 NOT NULL,
-    `description`		VARCHAR(8192) CHARACTER SET utf8mb4 NOT NULL,
+    `description`		TEXT CHARACTER SET utf8mb4 NOT NULL,
     `reservedPrice`		FLOAT NOT NULL,
     `priceStep`			FLOAT NOT NULL,
     `instantPrice`		FLOAT NOT NULL,
@@ -71,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `Product`
     `coverImageURL`		VARCHAR(2048) NOT NULL,
     `timeExpired`		TIMESTAMP NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
-    `updatedAt`			TIMESTAMP,
+    `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
     
     PRIMARY KEY(`id`)
 );
@@ -80,7 +81,7 @@ CREATE TABLE IF NOT EXISTS `BiddedProduct`
 (
 	`id`				BIGINT,
     `topBidderId`		BIGINT,
-    `currentPrice`		FLOAT NOT NULL,
+    `currentPrice`		FLOAT,
     `auctionLogCount`	INT NOT NULL DEFAULT 0,
     `bidderCount`		INT NOT NULL DEFAULT 0,
     `statusCode`		BIGINT NOT NULL DEFAULT 100,
@@ -113,7 +114,6 @@ CREATE TABLE IF NOT EXISTS `BiddedProductStatus`
     PRIMARY KEY(`id`)
 );
 
-
 CREATE TABLE IF NOT EXISTS `ProductImage`
 (
 	`id`				BIGINT AUTO_INCREMENT,
@@ -128,7 +128,8 @@ CREATE TABLE IF NOT EXISTS `MessageToSeller`
 	`id`				BIGINT,
     `message`			VARCHAR(1024) CHARACTER SET utf8mb4,
     `score`				BIGINT NOT NULL DEFAULT 0,
-    
+    `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
+
     PRIMARY KEY(`id`)
 );
 
@@ -137,7 +138,8 @@ CREATE TABLE IF NOT EXISTS `MessageToBidder`
 	`id`				BIGINT,
     `message`			VARCHAR(1024) CHARACTER SET utf8mb4,
     `score`				BIGINT NOT NULL DEFAULT 0,
-    
+    `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
+
     PRIMARY KEY(`id`)
 );
 
