@@ -1,7 +1,5 @@
 USE `Auction`;
 
-
--- View data
 -- SHOW TABLES;
 
 SELECT * FROM `ChangeRoleStatus`;
@@ -23,5 +21,3 @@ SELECT * FROM `BlockedBidder`;
 
 SELECT * FROM `MessageToSeller`;
 SELECT * FROM `MessageToBidder`;
-
-
