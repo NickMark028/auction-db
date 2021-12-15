@@ -11,6 +11,7 @@ SELECT * FROM `BidderView`;
 SELECT * FROM `ChangeRoleLog`;
 SELECT * FROM `SellerView`;
 
+-- SELECT * FROM `Product`;
 SELECT * FROM `ProductView`;
 SELECT * FROM `ProductCategory`;
 SELECT * FROM `ProductImage`;
