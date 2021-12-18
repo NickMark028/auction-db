@@ -1,7 +1,5 @@
 USE `Auction`;
 
-
--- View data
 -- SHOW TABLES;
 
 SELECT * FROM `ChangeRoleStatus`;
@@ -13,6 +11,7 @@ SELECT * FROM `BidderView`;
 SELECT * FROM `ChangeRoleLog`;
 SELECT * FROM `SellerView`;
 
+-- SELECT * FROM `Product`;
 SELECT * FROM `ProductView`;
 SELECT * FROM `ProductCategory`;
 SELECT * FROM `ProductImage`;
@@ -23,5 +22,3 @@ SELECT * FROM `BlockedBidder`;
 
 SELECT * FROM `MessageToSeller`;
 SELECT * FROM `MessageToBidder`;
-
-
