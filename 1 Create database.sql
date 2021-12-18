@@ -81,11 +81,11 @@ CREATE TABLE IF NOT EXISTS `BiddedProduct`
 (
 	`id`				BIGINT,
     `topBidderId`		BIGINT,
-    `currentPrice`		FLOAT,
+    `currentPrice`		FLOAT NOT NULL,
     `auctionLogCount`	INT NOT NULL DEFAULT 0,
     `bidderCount`		INT NOT NULL DEFAULT 0,
     `statusCode`		BIGINT NOT NULL DEFAULT 100,
-    
+    `remainingTime`		TIMESTAMP,
     PRIMARY KEY(`id`)
 );
 
