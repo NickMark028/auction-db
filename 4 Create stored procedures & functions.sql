@@ -47,7 +47,7 @@ CREATE PROCEDURE `SearchProductContainKeyword`
 )
 BEGIN
 	SELECT	*
-	FROM	`Product`
+	FROM	QueryProductView
 	WHERE	`name` LIKE CONCAT('%', _keyword, '%')
     LIMIT	_offset, _count;
 END; //
@@ -69,14 +69,14 @@ BEGIN
 		CALL SearchProductContainKeyword(_keyword, _offset, _count);
     ELSE
 		SELECT	COUNT(*) INTO _resultCount
-        FROM	`Product`
+        FROM	QueryProductView
 		WHERE	MATCH(`name`) AGAINST(_keyword IN BOOLEAN MODE);
         
 		IF _resultCount = 0 THEN
 			CALL SearchProductContainKeyword(_keyword, _offset, _count);
 		ELSE
 			SELECT	*
-			FROM	`Product`
+			FROM	QueryProductView
 			WHERE	MATCH(`name`) AGAINST(_keyword IN BOOLEAN MODE)
             LIMIT	_offset, _count;
 		END IF;

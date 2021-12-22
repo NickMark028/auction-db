@@ -1,27 +1,69 @@
-USE `Auction`;
+USE Auction;
 
-DROP VIEW IF EXISTS `AdminView`;
-CREATE VIEW `AdminView`
+DROP VIEW IF EXISTS UserView;
+CREATE VIEW UserView
 AS
-	SELECT	U.*
-	FROM	`Admin` A JOIN `User` U ON A.`id` = U.`id`;
+	SELECT	id, username, firstName, lastName, email, dateOfBirth, createdAt, updatedAt
+	FROM	`User`;
+SELECT * FROM UserView;
 
-DROP VIEW IF EXISTS `BidderView`;
-CREATE VIEW `BidderView`
-AS
-	SELECT	U.*, B.`address`, B.`verifed`, B.`positiveCount`, B.`negativeCount`, B.`isDeleted`
-	FROM	`Bidder` B JOIN `User` U ON B.`id` = U.`id`;
 
-DROP VIEW IF EXISTS `SellerView`;
-CREATE VIEW `SellerView`
+DROP VIEW IF EXISTS AdminView;
+CREATE VIEW AdminView
 AS
-	SELECT	BV.*, S.`expiredTime`, S.`active`
-	FROM	`Seller` S JOIN `BidderView` BV ON S.`id` = BV.`id`;
+	SELECT	UV.*
+	FROM	`Admin` A JOIN UserView UV ON A.id = UV.id;
+SELECT * FROM AdminView;
 
-DROP VIEW IF EXISTS `ProductView`;
-CREATE VIEW `ProductView`
+
+DROP VIEW IF EXISTS BidderView;
+CREATE VIEW BidderView
 AS
-	SELECT	P.*, BP.`topBidderId`, BP.`currentPrice`, BP.`auctionLogCount`, BP.`bidderCount`
-	FROM	`Product` P JOIN `BiddedProduct` BP ON P.`id` = BP.`id`;
+	SELECT	UV.*, B.address, B.verifed, B.positiveCount, B.negativeCount
+	FROM	Bidder B JOIN UserView UV ON B.id = UV.id
+    WHERE	B.isDeleted = FALSE;
+SELECT * FROM BidderView;
+
+
+DROP VIEW IF EXISTS SellerView;
+CREATE VIEW SellerView
+AS
+	SELECT	BV.*, S.expiredTime, S.`active`
+	FROM	Seller S JOIN BidderView BV ON S.id = BV.id;
+SELECT * FROM SellerView;
+
+
+DROP VIEW IF EXISTS ProductView;
+CREATE VIEW ProductView
+AS
+	SELECT	P.id, P.sellerId, P.`name`, P.`description`, P.reservedPrice, P.priceStep, P.instantPrice, P.isRenewal, P.coverimageURL, P.timeExpired, P.createdAt, BP.topBidderId, BP.currentPrice, BP.auctionLogCount, BP.bidderCount
+	FROM	Product P JOIN BiddedProduct BP ON P.id = BP.id
+    WHERE	P.isDeleted = FALSE;
+SELECT * FROM ProductView;
+    
+
+/* ------------------------------------------------------------------------ */
+DROP VIEW IF EXISTS QueryCategoryView;
+CREATE VIEW QueryCategoryView
+AS
+	SELECT		C.section, JSON_ARRAYAGG(JSON_OBJECT(
+					'id', C.id,
+					'name', C.`name`,
+					'path', C.`path`)
+				) AS categories
+	FROM		Category C
+	GROUP BY	C.section;
+SELECT * FROM QueryCategoryView;
+
+SELECT * FROM Category;
+DROP VIEW IF EXISTS QueryProductView;
+CREATE VIEW QueryProductView
+AS
+	SELECT	PV.*, C.id as categoryId, C.section, C.`name` as categoryName, C.`path`, SV.firstName as sellerFirstName, SV.lastName as sellerLastName
+	FROM	ProductView PV
+	JOIN	ProductCategory PC ON PV.id = PC.productId
+	JOIN	SellerView SV ON SV.id = PV.sellerId
+	JOIN	Category C ON PC.categoryId = C.id;
+SELECT * FROM QueryProductView;
 
 
