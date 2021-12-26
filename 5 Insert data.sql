@@ -44,7 +44,7 @@ SELECT * FROM `BiddedProductStatus`;
 INSERT INTO `Category`(`section`, `name`)
 VALUES
     ('Electronics', 'Laptop'),
-    ('Electronics', 'Mobie phone'),
+    ('Electronics', 'Mobile phone'),
     ('Electronics', 'Camera'),
     ('Styles', 'Dress'),
     ('Styles', 'Boot'),

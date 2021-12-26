@@ -43,6 +43,7 @@ SELECT * FROM ProductView;
     
 
 /* ------------------------------------------------------------------------ */
+
 DROP VIEW IF EXISTS QueryCategoryView;
 CREATE VIEW QueryCategoryView
 AS
@@ -55,15 +56,20 @@ AS
 	GROUP BY	C.section;
 SELECT * FROM QueryCategoryView;
 
-SELECT * FROM Category;
+
 DROP VIEW IF EXISTS QueryProductView;
 CREATE VIEW QueryProductView
 AS
-	SELECT	PV.*, C.id as categoryId, C.section, C.`name` as categoryName, C.`path`, SV.firstName as sellerFirstName, SV.lastName as sellerLastName
-	FROM	ProductView PV
-	JOIN	ProductCategory PC ON PV.id = PC.productId
-	JOIN	SellerView SV ON SV.id = PV.sellerId
-	JOIN	Category C ON PC.categoryId = C.id;
+	-- PV.*, C.id as categoryId, C.section, C.`name` as categoryName, C.`path`, SV.firstName as sellerFirstName, SV.lastName as sellerLastName
+	SELECT		PV.*,
+				JSON_OBJECT('firstName', SV.firstName, 'lastName', SV.lastName) AS seller,
+				C.section, C.`name` AS categoryName, C.`path` AS categoryPath,
+				IF (PV.topBidderId IS NULL, NULL, JSON_OBJECT('firstName', BV.firstName, 'lastName', BV.lastName)) AS topBidder
+	FROM		ProductView PV
+	JOIN		ProductCategory PC ON PV.id = PC.productId
+    LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
+	JOIN		SellerView SV ON SV.id = PV.sellerId
+	JOIN		Category C ON PC.categoryId = C.id;
 SELECT * FROM QueryProductView;
 
 
