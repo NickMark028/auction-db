@@ -41,17 +41,17 @@ SELECT * FROM `BiddedProductStatus`;
 /*********************************************************/
 /* CATEGORY */
 /*********************************************************/
-INSERT INTO `Category`(`section`, `name`)
+INSERT INTO `Category`(`section`, `name`, `path`)
 VALUES
-    ('Electronics', 'Laptop'),
-    ('Electronics', 'Mobile phone'),
-    ('Electronics', 'Camera'),
-    ('Styles', 'Dress'),
-    ('Styles', 'Boot'),
-    ('Styles', 'Pant'),
-    ('Styles', 'Shirt'),
-    ('Styles', 'Legging'),
-    ('Styles', 'Sock');
+    ('Electronics', 'Laptop', 'laptop'),
+    ('Electronics', 'Mobie phone', 'mobile-phone'),
+    ('Electronics', 'Camera', 'camera'),
+    ('Styles', 'Dress', 'dress'),
+    ('Styles', 'Boot', 'boot'),
+    ('Styles', 'Pant', 'pant'),
+    ('Styles', 'Shirt', 'shirt'),
+    ('Styles', 'Leggings', 'leggings'),
+    ('Styles', 'Sock', 'sock');
 SELECT * FROM `Category`;
 
 

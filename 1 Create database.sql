@@ -94,6 +94,7 @@ CREATE TABLE IF NOT EXISTS `Category`
 	`id`				BIGINT AUTO_INCREMENT,
     `section`			VARCHAR(64) CHARACTER SET utf8mb4 NOT NULL,
     `name`				VARCHAR(64) CHARACTER SET utf8mb4 NOT NULL,
+    `path`				VARCHAR(64) UNIQUE NOT NULL,
     
     PRIMARY KEY(`id`)
 );
