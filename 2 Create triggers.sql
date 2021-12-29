@@ -4,7 +4,7 @@ USE `auction`;
 /*********************************************************/
 DELIMITER //
 DROP TRIGGER IF EXISTS `OnAfterUpdateChangeRoleLog`; //
-CREATE TRIGGER `OnAfterInsertChangeRoleLog`
+CREATE TRIGGER `OnAfterUpdateChangeRoleLog`
 AFTER UPDATE ON `ChangeRoleLog`
 FOR EACH ROW
 BEGIN
