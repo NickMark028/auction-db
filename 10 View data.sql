@@ -11,12 +11,12 @@ SELECT * FROM BidderView;
 SELECT * FROM ChangeRoleLog;
 SELECT * FROM SellerView;
 
--- SELECT * FROM `Product`;
+-- SELECT * FROM Product;
 SELECT * FROM ProductView;
 SELECT * FROM ProductCategory;
 SELECT * FROM ProductImage;
 
--- SELECT * FROM WatchList;
+SELECT * FROM WatchListView;
 -- SELECT * FROM AuctionLog;
 -- SELECT * FROM BlockedBidder;
 
