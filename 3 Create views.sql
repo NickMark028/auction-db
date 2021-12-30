@@ -5,7 +5,7 @@ CREATE VIEW UserView
 AS
 	SELECT	id, username, firstName, lastName, email, dateOfBirth, createdAt, updatedAt
 	FROM	`User`;
-SELECT * FROM UserView;
+-- SELECT * FROM UserView;
 
 
 DROP VIEW IF EXISTS AdminView;
@@ -13,7 +13,7 @@ CREATE VIEW AdminView
 AS
 	SELECT	UV.*
 	FROM	`Admin` A JOIN UserView UV ON A.id = UV.id;
-SELECT * FROM AdminView;
+-- SELECT * FROM AdminView;
 
 
 DROP VIEW IF EXISTS BidderView;
@@ -22,7 +22,7 @@ AS
 	SELECT	UV.*, B.address, B.verifed, B.positiveCount, B.negativeCount
 	FROM	Bidder B JOIN UserView UV ON B.id = UV.id
     WHERE	B.isDeleted = FALSE;
-SELECT * FROM BidderView;
+-- SELECT * FROM BidderView;
 
 
 DROP VIEW IF EXISTS SellerView;
@@ -30,16 +30,27 @@ CREATE VIEW SellerView
 AS
 	SELECT	BV.*, S.expiredTime, S.`active`
 	FROM	Seller S JOIN BidderView BV ON S.id = BV.id;
-SELECT * FROM SellerView;
+-- SELECT * FROM SellerView;
 
 
 DROP VIEW IF EXISTS ProductView;
 CREATE VIEW ProductView
 AS
-	SELECT	P.id, P.sellerId, P.`name`, P.`description`, P.reservedPrice, P.priceStep, P.instantPrice, P.isRenewal, P.coverimageURL, P.timeExpired, P.createdAt, BP.topBidderId, BP.currentPrice, BP.auctionLogCount, BP.bidderCount
+	SELECT	P.id, P.sellerId, P.`name`, P.`description`, P.reservedPrice, P.priceStep, P.instantPrice,
+			P.isRenewal, P.coverImageURL, P.timeExpired, P.createdAt,
+            BP.topBidderId, BP.currentPrice, BP.auctionLogCount, BP.bidderCount
 	FROM	Product P JOIN BiddedProduct BP ON P.id = BP.id
     WHERE	P.isDeleted = FALSE;
-SELECT * FROM ProductView;
+-- SELECT * FROM ProductView;
+    
+    
+DROP VIEW IF EXISTS WatchListView;
+CREATE VIEW WatchListView
+AS
+	SELECT	WL.bidderId, WL.productId, WL.createdAt
+	FROM	WatchList WL
+    WHERE	WL.isDeleted = FALSE;
+SELECT * FROM WatchListView;
     
 
 /* ------------------------------------------------------------------------ */
@@ -54,7 +65,7 @@ AS
 				) AS categories
 	FROM		Category C
 	GROUP BY	C.section;
-SELECT * FROM QueryCategoryView;
+-- SELECT * FROM QueryCategoryView;
 
 
 DROP VIEW IF EXISTS QueryProductView;
@@ -70,6 +81,15 @@ AS
     LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
 	JOIN		SellerView SV ON SV.id = PV.sellerId
 	JOIN		Category C ON PC.categoryId = C.id;
-SELECT * FROM QueryProductView;
+-- SELECT * FROM QueryProductView;
 
+
+DROP VIEW IF EXISTS QueryWatchListView;
+CREATE VIEW QueryWatchListView
+AS
+	SELECT	PV.*, WLV.createdAt AS dateAdded
+	FROM	WatchListView WLV
+    JOIN 	ProductView PV ON PV.id = WLV.productId;
+SELECT * FROM QueryWatchListView;
+    
 

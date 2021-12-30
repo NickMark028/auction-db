@@ -83,3 +83,30 @@ BEGIN
 	END IF;
 END; //
 DELIMITER ;
+
+
+/*********************************************************/
+/* ToggleFavoriteProduct */
+/*********************************************************/
+DELIMITER //
+DROP PROCEDURE IF EXISTS `ToggleFavoriteProduct`; //
+CREATE PROCEDURE `ToggleFavoriteProduct`
+(
+    _bidderId			BIGINT,
+    _productId			BIGINT
+)
+BEGIN
+	IF EXISTS (	SELECT	* 
+				FROM	WatchList WL
+                WHERE	_bidderId = WL.bidderId AND productId_ = WL.productId) THEN
+		UPDATE	WatchList WL
+        SET		WL.isDeleted = NOT WL.isDeleted
+        WHERE	_bidderId = WL.bidderId AND productId_ = WL.productId;
+    ELSE
+		INSERT INTO WatchList(bidderId, productId)
+        VALUE (_bidderId, _productId);
+    END IF;
+END; //
+DELIMITER ;
+
+

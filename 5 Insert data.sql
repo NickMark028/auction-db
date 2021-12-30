@@ -5,7 +5,7 @@ USE `auction`;
 /* USER + ADMIN (admin, system@123password) (DO NOT CHANGE) */
 /*********************************************************/
 INSERT INTO `User`(`id`, `username`, `password`, `firstName`, `lastName`, `email`, `dateOfBirth`)
-VALUE (100, 'admin', '$2a$12$fVrTHxy/D.zJR35BQtPsPeG.nI.E2AaqNPsEx4LTKyBo8V3zIViQO', 'KTT', 'admin', 'admin@gmail.com', '2000-01-01');
+VALUE (100, 'admin', '$2a$12$fVrTHxy/D.zJR35BQtPsPeG.nI.E2AaqNPsEx4LTKyBo8V3zIViQO', 'KTT', 'admin', 'admin@auction.com', '2000-01-01');
 SELECT * FROM `User`;
 
 INSERT INTO `Admin`(`id`)
