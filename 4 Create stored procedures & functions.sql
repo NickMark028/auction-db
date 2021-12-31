@@ -100,25 +100,26 @@ DELIMITER //
 DROP PROCEDURE IF EXISTS `ToggleFavoriteProduct`; //
 CREATE PROCEDURE`ToggleFavoriteProduct`
 (
-    _bidderId			BIGINT,
-    _productId			BIGINT
+		_bidderId			BIGINT,
+	IN	_productId			BIGINT,
+    OUT isFavoriteDeleted	BOOL
 )
 BEGIN
 	START TRANSACTION;
-	
-    IF EXISTS (	SELECT	WL.isDeleted
-				FROM	WatchList WL
-                WHERE	_bidderId = WL.bidderId AND _productId = WL.productId) THEN
-		UPDATE	WatchList WL
-		SET		WL.createdAt = IF(WL.isDeleted, NOW(), WL.createdAt)
-		WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
-
-		UPDATE	WatchList WL
-		SET		WL.isDeleted = NOT WL.isDeleted
-		WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
-    ELSE
+    
+    SELECT	WL.isDeleted INTO isFavoriteDeleted
+	FROM	WatchList WL
+	WHERE	_bidderId = WL.bidderId AND _productId = WL.productId
+    LIMIT	1;
+    
+    IF (isFavoriteDeleted IS NULL) THEN
 		INSERT INTO WatchList(bidderId, productId)
-        VALUE (_bidderId, _productId);
+		VALUE (_bidderId, _productId);
+    ELSE
+		UPDATE	WatchList WL
+		SET		WL.isDeleted = NOT isFavoriteDeleted,
+				WL.createdAt = IF(isFavoriteDeleted, NOW(), WL.createdAt)
+		WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
     END IF;
     
     COMMIT;
