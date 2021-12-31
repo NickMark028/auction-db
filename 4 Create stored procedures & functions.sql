@@ -92,11 +92,13 @@ DELIMITER ;
 
 
 /*********************************************************/
-/* ToggleFavoriteProduct */
+/* ToggleFavoriteProduct
+	Return if the product is still availiable
+ */
 /*********************************************************/
 DELIMITER //
 DROP PROCEDURE IF EXISTS `ToggleFavoriteProduct`; //
-CREATE PROCEDURE `ToggleFavoriteProduct`
+CREATE PROCEDURE`ToggleFavoriteProduct`
 (
     _bidderId			BIGINT,
     _productId			BIGINT
@@ -112,8 +114,8 @@ BEGIN
 		WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
 
 		UPDATE	WatchList WL
-        SET		WL.isDeleted = NOT WL.isDeleted
-        WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
+		SET		WL.isDeleted = NOT WL.isDeleted
+		WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
     ELSE
 		INSERT INTO WatchList(bidderId, productId)
         VALUE (_bidderId, _productId);

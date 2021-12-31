@@ -16,10 +16,10 @@ GROUP BY	C.section;
 
 
 -- Get watch list
-SELECT	PV.*, WLV.createdAt AS dateAdded
+SELECT	PV.*, WLV.createdAt AS dateFavorited
 FROM	WatchListView WLV
-JOIN 	ProductView PV ON PV.id = WLV.productId;
-    
+JOIN 	ProductView PV ON PV.id = WLV.productId
+WHERE 	WLV.bidderId = 1000001;
 
 -- Top 5 product with most auction log
 SELECT		*
