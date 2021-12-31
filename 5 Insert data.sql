@@ -12,11 +12,11 @@ SET time_zone = '+7:00';
 /*********************************************************/
 INSERT INTO `User`(`id`, `username`, `password`, `firstName`, `lastName`, `email`, `dateOfBirth`)
 VALUE (100, 'admin', '$2a$12$fVrTHxy/D.zJR35BQtPsPeG.nI.E2AaqNPsEx4LTKyBo8V3zIViQO', 'KTT', 'admin', 'admin@auction.com', '2000-01-01');
-SELECT * FROM `User`;
+-- SELECT * FROM `User`;
 
 INSERT INTO `Admin`(`id`)
 VALUE (100);
-SELECT * FROM `Admin`;
+-- SELECT * FROM `Admin`;
 
 
 /*********************************************************/
@@ -29,7 +29,7 @@ VALUES
     (201, 'Decline update to seller'),
     (300, 'Bidder cancel request'),
     (400, 'Downgrade from seller to bidder');
-SELECT * FROM `ChangeRoleStatus`;
+-- SELECT * FROM `ChangeRoleStatus`;
 
 
 /*********************************************************/
@@ -41,7 +41,7 @@ VALUES
     (200, 'Time out'),
     (210, 'Product sold'),
     (220, 'Reject bidding');
-SELECT * FROM `BiddedProductStatus`;
+-- SELECT * FROM `BiddedProductStatus`;
 
 
 /*********************************************************/
@@ -58,7 +58,7 @@ VALUES
     ('Styles', 'Shirt', 'shirt'),
     ('Styles', 'Leggings', 'leggings'),
     ('Styles', 'Sock', 'sock');
-SELECT * FROM `Category`;
+-- SELECT * FROM `Category`;
 
 
 /*********************************************************/
@@ -164,8 +164,8 @@ CALL RegisterBidder('dlilleycrop2o@instagram.com', 'Loris, slender', 'Delly', 'L
 CALL RegisterBidder('ftrendle2p@toplist.cz', 'White-tailed jackrabbit', 'Fredrick', 'Trendle', '668 4th Point', '2005-03-31');
 CALL RegisterBidder('neveritt2q@elegantthemes.com', 'Cattle egret', 'Nelson', 'Everitt', '60409 Ronald Regan Way', '2008-02-21');
 CALL RegisterBidder('pwoodford2r@godaddy.com', 'Bald eagle', 'Pearline', 'Woodford', '1 American Ash Center', '1984-11-04');
-SELECT * FROM `User`;
-SELECT * FROM `Bidder`;
+-- SELECT * FROM `User`;
+-- SELECT * FROM `Bidder`;
 
 
 /*********************************************************/
@@ -205,8 +205,8 @@ UPDATE `ChangeRoleLog` CRL SET CRL.`statusCode` = 201 WHERE CRL.`id` = 1000006;
 UPDATE `ChangeRoleLog` CRL SET CRL.`statusCode` = 201 WHERE CRL.`id` = 1000007;
 UPDATE `ChangeRoleLog` CRL SET CRL.`statusCode` = 300 WHERE CRL.`id` = 1000008;
 UPDATE `ChangeRoleLog` CRL SET CRL.`statusCode` = 300 WHERE CRL.`id` = 1000009;
-SELECT * FROM `ChangeRoleLog`;
-SELECT * FROM `Seller`;
+-- SELECT * FROM `ChangeRoleLog`;
+-- SELECT * FROM `Seller`;
 
 
 /*********************************************************/
@@ -335,7 +335,7 @@ VALUES
     (1000052, 'Black Pant', 'Pant suitable for beauty', 4566, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
     (1000053, 'White Pant', 'Pant suitable for beauty', 5646, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
     (1000053, 'Blue Pant', 'Pant suitable for beauty', 4445, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31');
-SELECT * FROM `Product`;
+-- SELECT * FROM `Product`;
 
 INSERT INTO `BiddedProduct`(`id`, `currentprice`)
 VALUES
@@ -460,7 +460,7 @@ VALUES
 	(1000119,9552),
 	(1000120,9188),
 	(1000121,9420);
-SELECT * FROM `BiddedProduct`;
+-- SELECT * FROM `BiddedProduct`;
 
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
@@ -1062,7 +1062,7 @@ VALUES
     (1000120, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
     (1000120, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn'),
     (1000120, 'https://cf.shopee.vn/file/e20689ce35f18d37f67df05316e714f9_tn');
-SELECT * FROM `ProductImage`;
+-- SELECT * FROM `ProductImage`;
 
 
 /*********************************************************/

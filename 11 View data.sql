@@ -17,10 +17,10 @@ SELECT * FROM ProductCategory;
 SELECT * FROM ProductImage;
 
 SELECT * FROM WatchListView;
--- SELECT * FROM AuctionLog;
--- SELECT * FROM BlockedBidder;
+SELECT * FROM AuctionLog;
+SELECT * FROM BlockedBidder;
 
--- SELECT * FROM MessageToSeller;
--- SELECT * FROM MessageToBidder;
+SELECT * FROM MessageToSeller;
+SELECT * FROM MessageToBidder;
 
 
