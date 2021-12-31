@@ -1,5 +1,6 @@
 USE `auction`;
 
+
 /*********************************************************/
 /* TIME ZONE */
 /*********************************************************/
@@ -145,7 +146,6 @@ BEGIN
 	IF EXISTS (SELECT * FROM `BlockedBidder` BB WHERE NEW.`bidderId` = BB.`bidderId`) THEN
 		SIGNAL SQLSTATE '45000';
     END IF;
-		
 END; //
 DELIMITER ;
 

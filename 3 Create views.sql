@@ -51,8 +51,8 @@ AS
 	SELECT	WL.bidderId, WL.productId, WL.createdAt
 	FROM	WatchList WL
     WHERE	WL.isDeleted = FALSE;
-SELECT * FROM WatchListView;
-    
+-- SELECT * FROM WatchListView;
+
     
 /* ---------------------------------------------------------------------------------------- */
 
@@ -68,4 +68,6 @@ AS
 	LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
 	JOIN		SellerView SV ON SV.id = PV.sellerId
 	JOIN		Category C ON PC.categoryId = C.id;
-SELECT * FROM QueryProductView;
+-- SELECT * FROM QueryProductView;
+
+
