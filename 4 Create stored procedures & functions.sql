@@ -102,16 +102,24 @@ CREATE PROCEDURE `ToggleFavoriteProduct`
     _productId			BIGINT
 )
 BEGIN
-	IF EXISTS (	SELECT	* 
+	START TRANSACTION;
+	
+    IF EXISTS (	SELECT	WL.isDeleted
 				FROM	WatchList WL
-                WHERE	_bidderId = WL.bidderId AND productId_ = WL.productId) THEN
+                WHERE	_bidderId = WL.bidderId AND _productId = WL.productId) THEN
+		UPDATE	WatchList WL
+		SET		WL.createdAt = IF(WL.isDeleted, NOW(), WL.createdAt)
+		WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
+
 		UPDATE	WatchList WL
         SET		WL.isDeleted = NOT WL.isDeleted
-        WHERE	_bidderId = WL.bidderId AND productId_ = WL.productId;
+        WHERE	_bidderId = WL.bidderId AND _productId = WL.productId;
     ELSE
 		INSERT INTO WatchList(bidderId, productId)
         VALUE (_bidderId, _productId);
     END IF;
+    
+    COMMIT;
 END; //
 DELIMITER ;
 
