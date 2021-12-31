@@ -1,5 +1,6 @@
 USE Auction;
 
+
 DROP VIEW IF EXISTS UserView;
 CREATE VIEW UserView
 AS
@@ -52,44 +53,19 @@ AS
     WHERE	WL.isDeleted = FALSE;
 SELECT * FROM WatchListView;
     
-
-/* ------------------------------------------------------------------------ */
-
-DROP VIEW IF EXISTS QueryCategoryView;
-CREATE VIEW QueryCategoryView
-AS
-	SELECT		C.section, JSON_ARRAYAGG(JSON_OBJECT(
-					'id', C.id,
-					'name', C.`name`,
-					'path', C.`path`)
-				) AS categories
-	FROM		Category C
-	GROUP BY	C.section;
--- SELECT * FROM QueryCategoryView;
-
+    
+/* ---------------------------------------------------------------------------------------- */
 
 DROP VIEW IF EXISTS QueryProductView;
 CREATE VIEW QueryProductView
 AS
-	-- PV.*, C.id as categoryId, C.section, C.`name` as categoryName, C.`path`, SV.firstName as sellerFirstName, SV.lastName as sellerLastName
 	SELECT		PV.*,
 				JSON_OBJECT('firstName', SV.firstName, 'lastName', SV.lastName) AS seller,
 				C.section, C.`name` AS categoryName, C.`path` AS categoryPath,
 				IF (PV.topBidderId IS NULL, NULL, JSON_OBJECT('firstName', BV.firstName, 'lastName', BV.lastName)) AS topBidder
 	FROM		ProductView PV
 	JOIN		ProductCategory PC ON PV.id = PC.productId
-    LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
+	LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
 	JOIN		SellerView SV ON SV.id = PV.sellerId
 	JOIN		Category C ON PC.categoryId = C.id;
--- SELECT * FROM QueryProductView;
-
-
-DROP VIEW IF EXISTS QueryWatchListView;
-CREATE VIEW QueryWatchListView
-AS
-	SELECT	PV.*, WLV.createdAt AS dateAdded
-	FROM	WatchListView WLV
-    JOIN 	ProductView PV ON PV.id = WLV.productId;
-SELECT * FROM QueryWatchListView;
-    
-
+SELECT * FROM QueryProductView;

@@ -7,9 +7,9 @@ USE `auction`;
 
 
 /*********************************************************/
-/* CONFIGURATION */
+/* TIME ZONE */
 /*********************************************************/
-SET GLOBAL time_zone = '+7:00';
+SET time_zone = '+7:00';
 
 
 /*********************************************************/
@@ -197,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `ChangeRoleStatus`
 
 
 /*********************************************************/
-/* SET UP STARTING INCREMENT VALUE */
+/* SET UP AUTO_INCREMENT VALUE */
 /*********************************************************/
 ALTER TABLE `User` AUTO_INCREMENT = 1000001;
 ALTER TABLE `ChangeRoleLog` AUTO_INCREMENT = 1000001;
