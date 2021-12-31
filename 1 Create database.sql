@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS `User`
     `dateOfBirth`		DATE NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     `updatedAt`			TIMESTAMP,
+    `rfToken`			VARCHAR(512),
     
     PRIMARY KEY(`id`)
 );
