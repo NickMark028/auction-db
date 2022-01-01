@@ -212,7 +212,7 @@ UPDATE `ChangeRoleLog` CRL SET CRL.`statusCode` = 300 WHERE CRL.`id` = 1000009;
 /*********************************************************/
 /* PRODUCT + BIDDED_PRODUCT + PRODUCT_IMAGE */
 /*********************************************************/
-INSERT INTO `Product`(`sellerId`, `name`, `description`, `reservedPrice`, `priceStep`, `instantPrice`, `isRenewal`, `coverImageURL`, `timeExpired`)
+INSERT INTO `Product`(`sellerId`, `name`, `description`, `reservedPrice`, `priceStep`, `instantPrice`, `isRenewal`, `coverImageUrl`, `timeExpired`)
 VALUES
     (1000051, 'ASUS Laptop', 'Laptop suitable for gaming', 9500, 100, 5000, TRUE, 'https://cdn.tgdd.vn/Products/Images/44/247243/acer-nitro-gaming-an515-57-727j-i7-nhqd9sv005-10-600x600.jpg', '2021-12-31'),
     (1000052, 'ASUS Laptop', 'Laptop suitable for gaming', 3000, 100, 5000, FALSE, 'https://cdn.tgdd.vn/Products/Images/44/242201/msi-gf66-11uc-i7-224vn-600x600.jpg', '2021-12-31'),

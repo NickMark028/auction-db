@@ -38,7 +38,7 @@ DROP VIEW IF EXISTS ProductView;
 CREATE VIEW ProductView
 AS
 	SELECT	P.id, P.sellerId, P.`name`, P.`description`, P.reservedPrice, P.priceStep, P.instantPrice,
-			P.isRenewal, P.coverImageURL, P.timeExpired, P.createdAt,
+			P.isRenewal, P.coverImageUrl, P.timeExpired, P.createdAt,
             BP.topBidderId, BP.currentPrice, BP.auctionLogCount, BP.bidderCount
 	FROM	Product P JOIN BiddedProduct BP ON P.id = BP.id
     WHERE	P.isDeleted = FALSE;
