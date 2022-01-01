@@ -49,7 +49,7 @@ BEGIN
     
     -- Count the number of `auctionLogCout`
     UPDATE	`BiddedProduct` BP
-	SET		BP.`auctionLogCount` = (SELECT COUNT(DISTINCT AC.`biddedId`) FROM `AuctionLog` AC)
+	SET		BP.`auctionLogCount` = (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC)
 	WHERE	NEW.`productId` = BP.`id`;    
 END; //
 DELIMITER ;

@@ -157,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `WatchList`
 
 CREATE TABLE IF NOT EXISTS `AuctionLog`
 (
-	`id`				BIGINT,
+	`id`				BIGINT AUTO_INCREMENT,
 	`bidderId`			BIGINT NOT NULL,
 	`productId`			BIGINT NOT NULL,
     `price`				FLOAT NOT NULL,
@@ -205,6 +205,7 @@ ALTER TABLE `ChangeRoleLog` AUTO_INCREMENT = 1000001;
 ALTER TABLE `Product` AUTO_INCREMENT = 1000001;
 ALTER TABLE `ProductImage` AUTO_INCREMENT = 1000001;
 ALTER TABLE `Category` AUTO_INCREMENT = 1;
+ALTER TABLE `AuctionLog` AUTO_INCREMENT = 1000001;
 
 
 /*********************************************************/
