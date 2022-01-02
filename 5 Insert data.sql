@@ -274,67 +274,67 @@ VALUES
     (1000053, 'Nikin Camera', 'Camera suitable for photographer', 4123, 100, 5000, FALSE, 'https://binhminhdigital.com/Thumb/images/product/camera/canon/m50ii/may-anh-canon-eos-m50-ii-kit-efm1545mm-white.jpg', '2021-12-31'),
     (1000052, 'Casio Camera', 'Camera suitable for photographer', 2435, 100, 5000, FALSE, 'https://binhminhdigital.com/Thumb/images/product/may-anh-canon-eos-m200-kit-ef-m-15-45mm-is-stm-trang.jpg', '2021-12-31'),
     (1000053, 'Sony Camera', 'Camera suitable for photographer', 5234, 100, 5000, TRUE, 'https://binhminhdigital.com/Thumb/images/product/may-anh-canon-eos-m200-body-den(2).jpg', '2021-12-31'),
-    (1000053, 'Pink Dress', 'Dress suitable for beauty', 2352, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Red Dress', 'Dress suitable for beauty', 2345, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Green Dress', 'Dress suitable for beauty', 1234, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Blue Dress', 'Dress suitable for beauty', 4231, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Brown Dress', 'Dress suitable for beauty', 5433, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Purple Dress', 'Dress suitable for beauty', 4523, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Black Dress', 'Dress suitable for beauty', 4234, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Yellow Dress', 'Dress suitable for beauty', 4235, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'White Dress', 'Dress suitable for beauty', 5345, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Pink Dress', 'Dress suitable for beauty', 5634, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Blue Dress', 'Dress suitable for beauty', 3453, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Oragne Dress', 'Dress suitable for beauty', 3456, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Black Dress', 'Dress suitable for beauty', 4564, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Pink Dress', 'Dress suitable for beauty', 3453, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Blue Dress', 'Dress suitable for beauty', 3546, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'White Dress', 'Dress suitable for beauty', 3452, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Red Dress', 'Dress suitable for beauty', 5345, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Pink Dress', 'Dress suitable for beauty', 3445, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Blue Dress', 'Dress suitable for beauty', 5643, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Green Dress', 'Dress suitable for beauty', 4534, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Red Boot', 'Boot suitable for beauty', 4564, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Green Boot', 'Boot suitable for beauty', 4564, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Blue Boot', 'Boot suitable for beauty', 6745, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Brown Boot', 'Boot suitable for beauty', 5443, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Black Boot', 'Boot suitable for beauty', 3455, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Brown Boot', 'Boot suitable for beauty', 2345, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Blue Boot', 'Boot suitable for beauty', 5343, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'White Boot', 'Boot suitable for beauty', 5343, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Yellow Boot', 'Boot suitable for beauty', 3453, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Blue Boot', 'Boot suitable for beauty', 3454, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Green Boot', 'Boot suitable for beauty', 3463, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Brown Boot', 'Boot suitable for beauty', 3456, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Red Boot', 'Boot suitable for beauty', 6534, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Blue Boot', 'Boot suitable for beauty', 5634, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Green Boot', 'Boot suitable for beauty', 4536, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Blue Boot', 'Boot suitable for beauty', 3453, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Yellow Boot', 'Boot suitable for beauty', 5345, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Pink Boot', 'Boot suitable for beauty', 2334, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000052, 'Orange Boot', 'Boot suitable for beauty', 2222, 100, 5000, FALSE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'Black Boot', 'Boot suitable for beauty', 4444, 100, 5000, TRUE, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f', '2021-12-31'),
-    (1000053, 'White Pant', 'Pant suitable for beauty', 5555, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Red Pant', 'Pant suitable for beauty', 6666, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Green Pant', 'Pant suitable for beauty', 1211, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Blue Pant', 'Pant suitable for beauty', 2222, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Black Pant', 'Pant suitable for beauty', 3434, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Pink Pant', 'Pant suitable for beauty', 3232, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Yellow Pant', 'Pant suitable for beauty', 4343, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'White Pant', 'Pant suitable for beauty', 5454, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Blue Pant', 'Pant suitable for beauty', 4444, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Black Pant', 'Pant suitable for beauty', 7676, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Red Pant', 'Pant suitable for beauty', 6556, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Green Pant', 'Pant suitable for beauty', 4545, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Blue Pant', 'Pant suitable for beauty', 5432, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Yellow Pant', 'Pant suitable for beauty', 5454, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Brown Pant', 'Pant suitable for beauty', 6546, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Pink Pant', 'Pant suitable for beauty', 6454, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Purple Pant', 'Pant suitable for beauty', 4564, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Brown Pant', 'Pant suitable for beauty', 4566, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000052, 'Black Pant', 'Pant suitable for beauty', 4566, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'White Pant', 'Pant suitable for beauty', 5646, 100, 5000, TRUE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31'),
-    (1000053, 'Blue Pant', 'Pant suitable for beauty', 4445, 100, 5000, FALSE, 'https://cf.shopee.vn/file/1945c74cbbeefb9b559b338026c0ed0d', '2021-12-31');
+    (1000053, 'Pink Dress', 'Dress suitable for beauty', 2352, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Red Dress', 'Dress suitable for beauty', 2345, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Green Dress', 'Dress suitable for beauty', 1234, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Blue Dress', 'Dress suitable for beauty', 4231, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Brown Dress', 'Dress suitable for beauty', 5433, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Purple Dress', 'Dress suitable for beauty', 4523, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Black Dress', 'Dress suitable for beauty', 4234, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Yellow Dress', 'Dress suitable for beauty', 4235, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'White Dress', 'Dress suitable for beauty', 5345, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Pink Dress', 'Dress suitable for beauty', 5634, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Blue Dress', 'Dress suitable for beauty', 3453, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Oragne Dress', 'Dress suitable for beauty', 3456, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Black Dress', 'Dress suitable for beauty', 4564, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Pink Dress', 'Dress suitable for beauty', 3453, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Blue Dress', 'Dress suitable for beauty', 3546, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'White Dress', 'Dress suitable for beauty', 3452, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Red Dress', 'Dress suitable for beauty', 5345, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Pink Dress', 'Dress suitable for beauty', 3445, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Blue Dress', 'Dress suitable for beauty', 5643, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Green Dress', 'Dress suitable for beauty', 4534, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Red Boot', 'Boot suitable for beauty', 4564, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Green Boot', 'Boot suitable for beauty', 4564, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 6745, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Brown Boot', 'Boot suitable for beauty', 5443, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Black Boot', 'Boot suitable for beauty', 3455, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Brown Boot', 'Boot suitable for beauty', 2345, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 5343, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'White Boot', 'Boot suitable for beauty', 5343, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Yellow Boot', 'Boot suitable for beauty', 3453, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 3454, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Green Boot', 'Boot suitable for beauty', 3463, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Brown Boot', 'Boot suitable for beauty', 3456, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Red Boot', 'Boot suitable for beauty', 6534, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Blue Boot', 'Boot suitable for beauty', 5634, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Green Boot', 'Boot suitable for beauty', 4536, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Blue Boot', 'Boot suitable for beauty', 3453, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Yellow Boot', 'Boot suitable for beauty', 5345, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Pink Boot', 'Boot suitable for beauty', 2334, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000052, 'Orange Boot', 'Boot suitable for beauty', 2222, 100, 5000, FALSE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'Black Boot', 'Boot suitable for beauty', 4444, 100, 5000, TRUE, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg', '2021-12-31'),
+    (1000053, 'White Pant', 'Pant suitable for beauty', 5555, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Red Pant', 'Pant suitable for beauty', 6666, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Green Pant', 'Pant suitable for beauty', 1211, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Blue Pant', 'Pant suitable for beauty', 2222, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Black Pant', 'Pant suitable for beauty', 3434, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Pink Pant', 'Pant suitable for beauty', 3232, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Yellow Pant', 'Pant suitable for beauty', 4343, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'White Pant', 'Pant suitable for beauty', 5454, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Blue Pant', 'Pant suitable for beauty', 4444, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Black Pant', 'Pant suitable for beauty', 7676, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Red Pant', 'Pant suitable for beauty', 6556, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Green Pant', 'Pant suitable for beauty', 4545, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Blue Pant', 'Pant suitable for beauty', 5432, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Yellow Pant', 'Pant suitable for beauty', 5454, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Brown Pant', 'Pant suitable for beauty', 6546, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Pink Pant', 'Pant suitable for beauty', 6454, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Purple Pant', 'Pant suitable for beauty', 4564, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Brown Pant', 'Pant suitable for beauty', 4566, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000052, 'Black Pant', 'Pant suitable for beauty', 4566, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'White Pant', 'Pant suitable for beauty', 5646, 100, 5000, TRUE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31'),
+    (1000053, 'Blue Pant', 'Pant suitable for beauty', 4445, 100, 5000, FALSE, 'https://assets.adidas.com/images/w_600,f_auto,q_auto/c59f59615af743de861eac310156ae2b_9366/PANT_DJen_GU0813_21_model.jpg', '2021-12-31');
 -- SELECT * FROM `Product`;
 
 INSERT INTO `BiddedProduct`(`id`, `currentprice`)
@@ -764,104 +764,104 @@ VALUES
     (1000060, 'https://cf.shopee.vn/file/45726cddf948dbc3ef424b0c928a5ecd_tn');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000061, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000061, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000061, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000061, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000061, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000061, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000062, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000062, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000062, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000062, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000062, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000062, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000063, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000063, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000063, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000063, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000063, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000063, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000064, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000064, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000064, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000064, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000064, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000064, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000065, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000065, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000065, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000065, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000065, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000065, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000066, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000066, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000066, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000066, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000066, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000066, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000067, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000067, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000067, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000067, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000067, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000067, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 	INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000068, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000068, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000068, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000068, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000068, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000068, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000069, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000069, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000069, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000069, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000069, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000069, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000070, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000070, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000070, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000070, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000070, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000070, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000071, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000071, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000071, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000071, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000071, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000071, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000072, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000072, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000072, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000072, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000072, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000072, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000073, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000073, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000073, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000073, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000073, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000073, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000074, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000074, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000074, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000074, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000074, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000074, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000075, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000075, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000075, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000075, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000075, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000075, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000076, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000076, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000076, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000076, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000076, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000076, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000077, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000077, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000077, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000077, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000077, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000077, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000078, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000078, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000078, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000078, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000078, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000078, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000079, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000079, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000079, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000079, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000079, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000079, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
-    (1000080, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000080, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f'),
-    (1000090, 'https://cf.shopee.vn/file/60118f48195836101a7cafc0b9fced2f');
+    (1000080, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000080, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg'),
+    (1000090, 'https://assets.vogue.com/photos/5f341f6f4721c86585cbb800/master/pass/fullsizeoutput_6bcd_1_1080x.jpg');
 INSERT INTO `ProductImage`(`productId`, `url`)
 VALUES
     (1000081, 'https://cf.shopee.vn/file/4fa9bdce36c7b9fae684ff362db507d9_tn'),
