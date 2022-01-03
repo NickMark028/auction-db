@@ -44,12 +44,12 @@ FOR EACH ROW
 BEGIN
 	-- Increase the number of `auctionLogCount` by 1
 	UPDATE	`BiddedProduct` BP
-	SET		BP.`auctionLogCount` = BP.`auctionLogCount` + 1
+	SET		BP.`bidderCount` =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC)
 	WHERE	NEW.`productId` = BP.`id`;
-    
+   
     -- Count the number of `auctionLogCout`
     UPDATE	`BiddedProduct` BP
-	SET		BP.`auctionLogCount` = (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC)
+	SET		BP.`auctionLogCount` = BP.`auctionLogCount` + 1
 	WHERE	NEW.`productId` = BP.`id`;    
 END; //
 DELIMITER ;
