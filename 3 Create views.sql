@@ -81,4 +81,10 @@ AS
     GROUP BY 	QPV.id;
 SELECT * FROM QueryProductDetailView;
 
-
+DROP VIEW IF EXISTS BidHistoryView;
+CREATE VIEW BidHistoryView
+AS
+	SELECT		AL.*,BV.firstName,BV.lastName
+	FROM		auctionlog AL
+    JOIN		user BV ON Al.bidderId = BV.id;
+SELECT * FROM BidHistoryView;
