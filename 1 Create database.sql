@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `Product`
     `priceStep`			FLOAT NOT NULL,
     `instantPrice`		FLOAT NOT NULL,
     `isRenewal`			BOOL NOT NULL,
-    `coverImageURL`		VARCHAR(2048) NOT NULL,
+    `coverImageUrl`		VARCHAR(2048) NOT NULL,
     `timeExpired`		TIMESTAMP NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
