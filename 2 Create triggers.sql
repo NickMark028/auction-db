@@ -49,10 +49,15 @@ BEGIN
 	DECLARE topBidderId BIGINT;
     DECLARE topPrice FLOAT;
     
-    SELECT	AL.topBidderId, MAX(AL.price)
-	INTO	topBidderId, topPrice
+    SELECT	MAX(AL.price)
+	INTO	topPrice
     FROM	AuctionLog AL
-    WHERE	AL.productId = NEW.productId AND AL.topBidderId = MAX(AL.topBidderId);
+    WHERE	AL.productId = NEW.productId;
+    
+    SELECT	AL.bidderId
+	INTO	topBidderId
+    FROM	AuctionLog AL
+    WHERE	AL.productId = NEW.productId AND AL.price = topPrice;
     
     UPDATE	BiddedProduct BP
 	SET		BP.bidderCount =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),
@@ -62,6 +67,23 @@ BEGIN
 	WHERE	NEW.productId = BP.id;    
 END; //
 DELIMITER ;
+
+
+/*********************************************************/
+-- DELIMITER //
+-- DROP TRIGGER IF EXISTS `OnBeforeInsertAuctionLog`; //
+-- CREATE TRIGGER `OnBeforeInsertAuctionLog`
+-- BEFORE INSERT ON `AuctionLog`
+-- FOR EACH ROW
+-- BEGIN
+-- 	-- Only allow newly inserted log has a price higher the the last price + step price
+--     IF NEW.price <
+-- 		(SELECT MAX(AL.price) FROM AuctionLog AL WHERE AL.productId = NEW.productId GROUP BY AL.price) +
+--         (SELECT priceStep FROM Product P WHERE P.id = NEW.productId LIMIT 1) THEN
+-- 		SIGNAL SQLSTATE '45000';
+-- 	END IF;
+-- END; //
+-- DELIMITER ;
 
 
 /*********************************************************/

@@ -1190,16 +1190,32 @@ VALUES (1000001, 1),
  (1000120, 6);
 
 
- insert into `auctionlog`(`bidderId`,`productId`,`price`)
- values 
-	(1000001,1000001,10000),
-    (1000002,1000001,12000),
-    (1000003,1000001,16000),
-    (1000001,1000001,20000),
-    (1000001,1000002,100000),
-    (1000004,1000002,120000),
-    (1000001,1000002,160000),
-     (1000004,1000002,140000),
-      (1000001,1000002,170000)
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+	(1000001,1000001,10000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000002,1000001,12000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000003,1000001,16000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000001,1000001,20000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000001,1000002,100000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000004,1000002,120000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000001,1000002,160000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000004,1000002,140000);
+insert into `auctionlog`(`bidderId`,`productId`,`price`)
+values
+    (1000001,1000002,170000);
     
 
