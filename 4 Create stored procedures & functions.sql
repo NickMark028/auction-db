@@ -14,6 +14,7 @@ DELIMITER //
 DROP PROCEDURE IF EXISTS `RegisterBidder`; //
 CREATE PROCEDURE `RegisterBidder`
 (
+	_username			VARCHAR(128),
     _email				VARCHAR(128),
     _password			VARCHAR(512),
     _firstName			VARCHAR(64) CHARACTER SET utf8mb4,
@@ -28,7 +29,7 @@ BEGIN
 	
     -- Register new bidder
     INSERT INTO `User`(`username`, `password`, `firstName`, `lastName`, `email`, `dateOfBirth`)
-    VALUE (_email, _password, _firstName, _lastName, _email, _dateOfBirth);
+    VALUE (_username, _password, _firstName, _lastName, _email, _dateOfBirth);
 
     SET _id = (SELECT `id` FROM `User` U WHERE U.`username` = _email);
 

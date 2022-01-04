@@ -23,7 +23,7 @@ AS
 	SELECT	UV.*, B.address, B.verifed, B.positiveCount, B.negativeCount
 	FROM	Bidder B JOIN UserView UV ON B.id = UV.id
     WHERE	B.isDeleted = FALSE;
-SELECT * FROM BidderView;
+-- SELECT * FROM BidderView;
 
 
 DROP VIEW IF EXISTS SellerView;
@@ -68,7 +68,7 @@ AS
 	LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
 	JOIN		SellerView SV ON SV.id = PV.sellerId
 	JOIN		Category C ON PC.categoryId = C.id;
-SELECT * FROM QueryProductView;
+-- SELECT * FROM QueryProductView;
 
 
 DROP VIEW IF EXISTS QueryProductDetailView;
@@ -79,7 +79,7 @@ AS
     JOIN		ProductImage I ON QPV.id = I.productId
 	JOIN		Bidder B ON B.id = QPV.sellerId
     GROUP BY 	QPV.id;
-SELECT * FROM QueryProductDetailView;
+-- SELECT * FROM QueryProductDetailView;
 
 DROP VIEW IF EXISTS BidHistoryView;
 CREATE VIEW BidHistoryView
@@ -87,4 +87,4 @@ AS
 	SELECT		AL.*,BV.firstName,BV.lastName
 	FROM		auctionlog AL
     JOIN		user BV ON Al.bidderId = BV.id;
-SELECT * FROM BidHistoryView;
+-- SELECT * FROM BidHistoryView;
