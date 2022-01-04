@@ -31,7 +31,7 @@ BEGIN
     INSERT INTO `User`(`username`, `password`, `firstName`, `lastName`, `email`, `dateOfBirth`)
     VALUE (_username, _password, _firstName, _lastName, _email, _dateOfBirth);
 
-    SET _id = (SELECT `id` FROM `User` U WHERE U.`username` = _email);
+    SET _id = (SELECT `id` FROM `User` U WHERE U.`username` = _username);
 
 	INSERT INTO `Bidder`(`id`, `address`)
 	VALUE (_id, _address);    
