@@ -7,7 +7,7 @@ SELECT * FROM BiddedProductStatus;
 SELECT * FROM Category;
 
 SELECT * FROM AdminView;
-SELECT * FROM BidderView;
+SELECT * FROM BidderView LIMIT 150;
 SELECT * FROM ChangeRoleLog;
 SELECT * FROM SellerView;
 

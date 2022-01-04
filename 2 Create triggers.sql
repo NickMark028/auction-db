@@ -43,14 +43,23 @@ AFTER INSERT ON `AuctionLog`
 FOR EACH ROW
 BEGIN
 	-- Increase the number of `auctionLogCount` by 1
-	UPDATE	`BiddedProduct` BP
-	SET		BP.`bidderCount` =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC)
-	WHERE	NEW.`productId` = BP.`id`;
-   
     -- Count the number of `auctionLogCout`
-    UPDATE	`BiddedProduct` BP
-	SET		BP.`auctionLogCount` = BP.`auctionLogCount` + 1
-	WHERE	NEW.`productId` = BP.`id`;    
+    -- Update current price from BiddedProduct
+    -- Update top bidder from BiddedProduct
+	DECLARE topBidderId BIGINT;
+    DECLARE topPrice FLOAT;
+    
+    SELECT	AL.topBidderId, MAX(AL.price)
+	INTO	topBidderId, topPrice
+    FROM	AuctionLog AL
+    WHERE	AL.productId = NEW.productId AND AL.topBidderId = MAX(AL.topBidderId);
+    
+    UPDATE	BiddedProduct BP
+	SET		BP.bidderCount =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),
+			BP.auctionLogCount = BP.auctionLogCount + 1,
+            BP.topBidderId = topBidderId,
+            BP.currentPrice = topPrice
+	WHERE	NEW.productId = BP.id;    
 END; //
 DELIMITER ;
 
