@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `Product`
     `instantPrice`		FLOAT NOT NULL,
     `isRenewal`			BOOL NOT NULL,
     `coverImageUrl`		VARCHAR(2048) NOT NULL,
-    `timeExpired`		TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `timeExpired`		TIMESTAMP NOT NULL,
     `createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     `isDeleted`			BOOL NOT NULL DEFAULT FALSE,
     
