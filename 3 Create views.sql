@@ -1,4 +1,4 @@
-USE Auction;
+USE `auction-dev`;
 
 
 DROP VIEW IF EXISTS UserView;
@@ -74,12 +74,13 @@ AS
 DROP VIEW IF EXISTS QueryProductDetailView;
 CREATE VIEW QueryProductDetailView
 AS
-	SELECT		QPV.*, JSON_ARRAYAGG(url) as urls, B.positiveCount, B.negativeCount
+	SELECT		QPV.*, JSON_ARRAYAGG(I.url) as urls, B.positiveCount, B.negativeCount
 	FROM		QueryProductView QPV
     JOIN		ProductImage I ON QPV.id = I.productId
 	JOIN		Bidder B ON B.id = QPV.sellerId
     GROUP BY 	QPV.id;
 -- SELECT * FROM QueryProductDetailView;
+
 
 DROP VIEW IF EXISTS BidHistoryView;
 CREATE VIEW BidHistoryView
@@ -88,3 +89,5 @@ AS
 	FROM		auctionlog AL
     JOIN		user BV ON Al.bidderId = BV.id;
 -- SELECT * FROM BidHistoryView;
+
+

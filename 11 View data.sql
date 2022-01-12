@@ -1,4 +1,4 @@
-USE `Auction`;
+USE `auction-dev`;
 
 -- SHOW TABLES;
 

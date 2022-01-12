@@ -1,4 +1,4 @@
-USE auction;
+USE `auction-dev`;
 
 
 -- Time zone
@@ -16,10 +16,11 @@ GROUP BY	C.section;
 
 
 -- Get watch list
-SELECT	PV.*, WLV.createdAt AS dateFavorited
-FROM	WatchListView WLV
-JOIN 	ProductView PV ON PV.id = WLV.productId
-WHERE 	WLV.bidderId = 1000001;
+SELECT		PV.*, WLV.createdAt AS dateFavorited
+FROM		WatchListView WLV
+JOIN 		ProductView PV ON PV.id = WLV.productId
+WHERE 		WLV.bidderId = 1000001
+ORDER BY	PV.id DESC;
 
 -- Top 5 product with most auction log
 SELECT		*

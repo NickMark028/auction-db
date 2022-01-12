@@ -1,9 +1,9 @@
 /*********************************************************/
 /* CREATE DATABASE */
 /*********************************************************/
-DROP DATABASE IF EXISTS `auction`;
-CREATE DATABASE IF NOT EXISTS `auction`;
-USE `auction`;
+DROP DATABASE IF EXISTS `auction-dev`;
+CREATE DATABASE IF NOT EXISTS `auction-dev`;
+USE `auction-dev`;
 
 
 /*********************************************************/

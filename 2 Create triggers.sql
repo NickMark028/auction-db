@@ -1,4 +1,4 @@
-USE `auction`;
+USE `auction-dev`;
 
 
 /*********************************************************/
@@ -9,8 +9,8 @@ SET time_zone = '+7:00';
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS `OnAfterUpdateChangeRoleLog`; //
-CREATE TRIGGER `OnAfterUpdateChangeRoleLog`
+DROP TRIGGER IF EXISTS OnAfterUpdateChangeRoleLog; //
+CREATE TRIGGER OnAfterUpdateChangeRoleLog
 AFTER UPDATE ON `ChangeRoleLog`
 FOR EACH ROW
 BEGIN
@@ -36,9 +36,11 @@ DELIMITER ;
 
 
 /*********************************************************/
+-- AuctionLog
+
 DELIMITER //
-DROP TRIGGER IF EXISTS `OnAfterInsertAuctionLog`; //
-CREATE TRIGGER `OnAfterInsertAuctionLog`
+DROP TRIGGER IF EXISTS OnAfterInsertAuctionLog; //
+CREATE TRIGGER OnAfterInsertAuctionLog
 AFTER INSERT ON `AuctionLog`
 FOR EACH ROW
 BEGIN
@@ -88,8 +90,8 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS `OnBeforeInsertMessageToSeller`; //
-CREATE TRIGGER `OnBeforeInsertMessageToSeller`
+DROP TRIGGER IF EXISTS OnBeforeInsertMessageToSeller; //
+CREATE TRIGGER OnBeforeInsertMessageToSeller
 BEFORE INSERT ON `MessageToSeller`
 FOR EACH ROW
 BEGIN
@@ -109,8 +111,8 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS `OnAfterInsertMessageToSeller`; //
-CREATE TRIGGER `OnAfterInsertMessageToSeller`
+DROP TRIGGER IF EXISTS OnAfterInsertMessageToSeller; //
+CREATE TRIGGER OnAfterInsertMessageToSeller
 BEFORE INSERT ON `MessageToSeller`
 FOR EACH ROW
 BEGIN
@@ -140,8 +142,8 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS `OnAfterInsertMessageToBidder`; //
-CREATE TRIGGER `OnAfterInsertMessageToBidder`
+DROP TRIGGER IF EXISTS OnAfterInsertMessageToBidder; //
+CREATE TRIGGER OnAfterInsertMessageToBidder
 BEFORE INSERT ON `MessageToBidder`
 FOR EACH ROW
 BEGIN
@@ -168,8 +170,8 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS `OnBeforeInsertAuctionLog`; //
-CREATE TRIGGER `OnBeforeInsertAuctionLog`
+DROP TRIGGER IF EXISTS OnBeforeInsertAuctionLog; //
+CREATE TRIGGER OnBeforeInsertAuctionLog
 BEFORE INSERT ON `AuctionLog`
 FOR EACH ROW
 BEGIN
