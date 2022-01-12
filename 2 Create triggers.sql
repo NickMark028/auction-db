@@ -36,56 +36,105 @@ DELIMITER ;
 
 
 /*********************************************************/
--- AuctionLog
+DELIMITER //
+DROP TRIGGER IF EXISTS OnBeforeInsertAuctionLog; //
+CREATE TRIGGER OnBeforeInsertAuctionLog
+BEFORE INSERT ON `AuctionLog`
+FOR EACH ROW
+BEGIN
+	-- Reject insert a price lower than the Product.reservedPrice
+	IF EXISTS(	SELECT	1
+				FROM	Product P
+				WHERE	P.reservedPrice > NEW.price) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
+	END IF;
 
+    -- Block new log in AuctionLog for those who is banned
+	IF EXISTS (	SELECT	1
+				FROM	BlockedBidder BB
+				WHERE	BB.bidderId = NEW.bidderId AND BB.productId = NEW.productId) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'Bidder is banned';
+    END IF;
+END; //
+DELIMITER ;
+
+
+/*********************************************************/
 DELIMITER //
 DROP TRIGGER IF EXISTS OnAfterInsertAuctionLog; //
 CREATE TRIGGER OnAfterInsertAuctionLog
 AFTER INSERT ON `AuctionLog`
 FOR EACH ROW
 BEGIN
-	-- Increase the number of `auctionLogCount` by 1
-    -- Count the number of `auctionLogCout`
-    -- Update current price from BiddedProduct
-    -- Update top bidder from BiddedProduct
 	DECLARE topBidderId BIGINT;
-    DECLARE topPrice FLOAT;
-    
-    SELECT	MAX(AL.price)
-	INTO	topPrice
-    FROM	AuctionLog AL
-    WHERE	AL.productId = NEW.productId;
-    
-    SELECT	AL.bidderId
-	INTO	topBidderId
-    FROM	AuctionLog AL
-    WHERE	AL.productId = NEW.productId AND AL.price = topPrice;
-    
-    UPDATE	BiddedProduct BP
-	SET		BP.bidderCount =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),
-			BP.auctionLogCount = BP.auctionLogCount + 1,
-            BP.topBidderId = topBidderId,
-            BP.currentPrice = topPrice
-	WHERE	NEW.productId = BP.id;    
+	DECLARE topPrice FLOAT;
+
+	IF (SELECT BP.currentPrice FROM BiddedProduct BP WHERE BP.id = NEW.productId) IS NULL THEN
+		UPDATE	BiddedProduct BP
+		SET		BP.topBidderId = NEW.bidderId,
+				BP.currentPrice = NEW.price,
+				BP.auctionLogCount = 1,
+				BP.bidderCount = 1
+		WHERE	BP.id = NEW.productId;
+	ELSE
+		-- Increase the number of `auctionLogCount` by 1
+		-- Count the number of `auctionLogCout`
+		-- Update current price from BiddedProduct
+		-- Update top bidder from BiddedProduct
+		SELECT	MAX(AL.price)
+		INTO	topPrice
+		FROM	AuctionLog AL
+		WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+
+		SELECT	AL.bidderId
+		INTO	topBidderId
+		FROM	AuctionLog AL
+		WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+
+		UPDATE	BiddedProduct BP
+		SET		BP.bidderCount =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),
+				BP.auctionLogCount = BP.auctionLogCount + 1,
+				BP.topBidderId = topBidderId,
+				BP.currentPrice = topPrice
+		WHERE	NEW.productId = BP.id;    
+	END IF;
 END; //
 DELIMITER ;
 
 
 /*********************************************************/
--- DELIMITER //
--- DROP TRIGGER IF EXISTS `OnBeforeInsertAuctionLog`; //
--- CREATE TRIGGER `OnBeforeInsertAuctionLog`
--- BEFORE INSERT ON `AuctionLog`
--- FOR EACH ROW
--- BEGIN
--- 	-- Only allow newly inserted log has a price higher the the last price + step price
---     IF NEW.price <
--- 		(SELECT MAX(AL.price) FROM AuctionLog AL WHERE AL.productId = NEW.productId GROUP BY AL.price) +
---         (SELECT priceStep FROM Product P WHERE P.id = NEW.productId LIMIT 1) THEN
--- 		SIGNAL SQLSTATE '45000';
--- 	END IF;
--- END; //
--- DELIMITER ;
+DELIMITER //
+DROP TRIGGER IF EXISTS OnAfterInsertBlockedBidder; //
+CREATE TRIGGER OnAfterInsertBlockedBidder
+AFTER INSERT ON `BlockedBidder`
+FOR EACH ROW
+BEGIN
+	DECLARE topBidderId BIGINT;
+	DECLARE topPrice FLOAT;
+
+	-- Increase the number of `auctionLogCount` by 1
+	-- Count the number of `auctionLogCout`
+	-- Update current price from BiddedProduct
+	-- Update top bidder from BiddedProduct
+	SELECT	MAX(AL.price)
+	INTO	topPrice
+	FROM	AuctionLog AL
+	WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+
+	SELECT	AL.bidderId
+	INTO	topBidderId
+	FROM	AuctionLog AL
+	WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+
+	UPDATE	BiddedProduct BP
+	SET		BP.bidderCount = (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),	-- Only select non-blocked bidder 
+			BP.topBidderId = topBidderId,
+			BP.currentPrice = topPrice
+	WHERE	NEW.productId = BP.id;    
+END; //
+DELIMITER ;
 
 
 /*********************************************************/
@@ -164,21 +213,6 @@ BEGIN
 		SET		B.`negativeCount` = B.`negativeCount` + 1
         WHERE	B.`id` = bidderId;
     END IF;    
-END; //
-DELIMITER ;
-
-
-/*********************************************************/
-DELIMITER //
-DROP TRIGGER IF EXISTS OnBeforeInsertAuctionLog; //
-CREATE TRIGGER OnBeforeInsertAuctionLog
-BEFORE INSERT ON `AuctionLog`
-FOR EACH ROW
-BEGIN
-    -- Block new log in AuctionLog for those who is banned
-	IF EXISTS (SELECT * FROM `BlockedBidder` BB WHERE NEW.`bidderId` = BB.`bidderId`) THEN
-		SIGNAL SQLSTATE '45000';
-    END IF;
 END; //
 DELIMITER ;
 
