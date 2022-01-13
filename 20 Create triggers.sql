@@ -44,8 +44,16 @@ FOR EACH ROW
 BEGIN
 	-- Reject insert a price lower than the Product.reservedPrice
 	IF EXISTS(	SELECT	1
-				FROM	Product P
-				WHERE	P.reservedPrice > NEW.price) THEN
+				FROM	ProductView PV
+				WHERE	PV.id = NEW.productId AND PV.reservedPrice > NEW.price) THEN
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
+	END IF;
+
+	-- Reject insert a price lower than the Product.currentPrice + Product.priceStep if there is a top bidder
+	IF EXISTS(	SELECT	1
+				FROM	ProductView PV
+				WHERE	PV.id = NEW.productId AND NEW.price < IF(PV.currentPrice IS NULL, PV.reservedPrice, PV.currentPrice + PV.priceStep)) THEN
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
 	END IF;
