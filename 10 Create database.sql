@@ -3,7 +3,7 @@
 /*********************************************************/
 DROP DATABASE IF EXISTS `auction-dev`;
 CREATE DATABASE IF NOT EXISTS `auction-dev`;
-USE `auction-dev`;
+USE `auction`;
 
 
 /*********************************************************/
@@ -15,6 +15,17 @@ SET time_zone = '+7:00';
 /*********************************************************/
 /* CREATE TABLES */
 /*********************************************************/
+
+CREATE TABLE IF NOT exists `acceptBidder`
+(
+	
+	`productId`		 	bigint not null,
+    `bidderId` 			bigint not null,
+    `createdAt`			timestamp not null default now() ,
+    
+    PRIMARY KEY(`bidderId`,`productId`)
+  
+);
 CREATE TABLE IF NOT EXISTS `User`
 (
 	`id`				BIGINT AUTO_INCREMENT,
@@ -278,5 +289,13 @@ ADD FOREIGN KEY `FK_MTS_BP`(`id`)
 ALTER TABLE `MessageToBidder`
 ADD FOREIGN KEY `FK_MTB_BP`(`id`)
 	REFERENCES `BiddedProduct`(`id`);    
+
+
+    
+ALTER TABLE `AcceptBidder`
+ADD FOREIGN KEY `FK_AB_B`(`bidderId`)
+	REFERENCES `Bidder`(`id`),
+ADD FOREIGN KEY `FK_AB_BP`(`productId`)
+	REFERENCES `BiddedProduct`(`id`);
     
     
