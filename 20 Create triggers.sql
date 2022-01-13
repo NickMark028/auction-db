@@ -91,7 +91,8 @@ BEGIN
 		SELECT	AL.bidderId
 		INTO	topBidderId
 		FROM	AuctionLog AL
-		WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+		WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId)
+        LIMIT	1;
 
 		UPDATE	BiddedProduct BP
 		SET		BP.bidderCount =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),
