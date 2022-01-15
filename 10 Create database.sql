@@ -22,7 +22,7 @@ CREATE TABLE IF NOT exists `acceptBidder`
 	`productId`		 	bigint not null,
     `bidderId` 			bigint not null,
     `createdAt`			timestamp not null default now() ,
-    
+    `status`			boolean not null default 1,
     PRIMARY KEY(`bidderId`,`productId`)
   
 );
