@@ -14,3 +14,5 @@ DROP COLUMN timeExpired;
 ALTER TABLE Product
 RENAME COLUMN timeExpired2 TO timeExpired;
 
+
+

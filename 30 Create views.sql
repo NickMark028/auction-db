@@ -40,7 +40,8 @@ AS
 	SELECT	P.id, P.sellerId, P.`name`, P.`description`, P.reservedPrice, P.priceStep, P.instantPrice,
 			P.isRenewal, P.coverImageUrl, P.timeExpired, P.createdAt,
             BP.topBidderId, BP.currentPrice, BP.auctionLogCount, BP.bidderCount
-	FROM	Product P JOIN BiddedProduct BP ON P.id = BP.id
+	FROM	Product P
+    JOIN	BiddedProduct BP ON P.id = BP.id
     WHERE	P.isDeleted = FALSE;
 -- SELECT * FROM ProductView;
     

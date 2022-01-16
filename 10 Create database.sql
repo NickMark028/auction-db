@@ -15,16 +15,15 @@ SET time_zone = '+7:00';
 /*********************************************************/
 /* CREATE TABLES */
 /*********************************************************/
-
+DROP TABLE IF EXISTS acceptBidder;
 CREATE TABLE IF NOT exists `acceptBidder`
 (
-	
 	`productId`		 	bigint not null,
     `bidderId` 			bigint not null,
     `createdAt`			timestamp not null default now() ,
     `status`			boolean not null default 1,
-    PRIMARY KEY(`bidderId`,`productId`)
-  
+    
+    PRIMARY KEY(`bidderId`,`productId`)  
 );
 CREATE TABLE IF NOT EXISTS `User`
 (
@@ -98,6 +97,7 @@ CREATE TABLE IF NOT EXISTS `BiddedProduct`
     `bidderCount`		INT NOT NULL DEFAULT 0,
     `statusCode`		BIGINT NOT NULL DEFAULT 100,
     `remainingTime`		TIMESTAMP,
+    
     PRIMARY KEY(`id`)
 );
 
@@ -290,9 +290,7 @@ ADD FOREIGN KEY `FK_MTS_BP`(`id`)
 ALTER TABLE `MessageToBidder`
 ADD FOREIGN KEY `FK_MTB_BP`(`id`)
 	REFERENCES `BiddedProduct`(`id`);    
-
-
-    
+   
 ALTER TABLE `AcceptBidder`
 ADD FOREIGN KEY `FK_AB_B`(`bidderId`)
 	REFERENCES `Bidder`(`id`),

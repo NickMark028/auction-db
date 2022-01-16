@@ -37,6 +37,18 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
+DROP TRIGGER IF EXISTS OnAfterInsertProduct; //
+CREATE TRIGGER OnAfterInsertProduct
+AFTER UPDATE ON Product
+FOR EACH ROW
+BEGIN
+
+END; //
+DELIMITER ;
+
+
+/*********************************************************/
+DELIMITER //
 DROP TRIGGER IF EXISTS OnBeforeInsertAuctionLog; //
 CREATE TRIGGER OnBeforeInsertAuctionLog
 BEFORE INSERT ON `AuctionLog`
@@ -88,7 +100,7 @@ BEGIN
 		WHERE	BP.id = NEW.productId;
 	ELSE
 		-- Increase the number of `auctionLogCount` by 1
-		-- Count the number of `auctionLogCout`
+		-- Count the number of `auctionLogCouut`
 		-- Update current price from BiddedProduct
 		-- Update top bidder from BiddedProduct
 		SELECT	MAX(AL.price)

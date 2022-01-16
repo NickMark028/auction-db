@@ -10,7 +10,7 @@ SELECT * FROM BidderView LIMIT 150;
 SELECT * FROM ChangeRoleLog;
 SELECT * FROM SellerView;
 
--- SELECT * FROM Product;
+SELECT * FROM Product;
 SELECT * FROM ProductView;
 SELECT * FROM ProductCategory;
 SELECT * FROM ProductImage;
