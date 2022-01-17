@@ -43,3 +43,11 @@ ORDER BY	IF(PV.currentPrice IS NULL, PV.reservedPrice, PV.currentPrice) DESC
 LIMIT 		5;
 
 
+
+-- CREATE EVENT ScheduleTimeOutForProduct10000010
+-- ON SCHEDULE AT timeExpired
+-- DO
+-- 	UPDATE  BiddedProduct
+-- 	SET     statusCode = 200
+-- 	WHERE   id = productId;
+

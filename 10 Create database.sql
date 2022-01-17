@@ -15,16 +15,6 @@ SET time_zone = '+7:00';
 /*********************************************************/
 /* CREATE TABLES */
 /*********************************************************/
-DROP TABLE IF EXISTS acceptBidder;
-CREATE TABLE IF NOT exists `acceptBidder`
-(
-	`productId`		 	bigint not null,
-    `bidderId` 			bigint not null,
-    `createdAt`			timestamp not null default now() ,
-    `status`			boolean not null default 1,
-    
-    PRIMARY KEY(`bidderId`,`productId`)  
-);
 CREATE TABLE IF NOT EXISTS `User`
 (
 	`id`				BIGINT AUTO_INCREMENT,
@@ -137,6 +127,16 @@ CREATE TABLE IF NOT EXISTS `ProductImage`
     PRIMARY KEY(`id`)
 );
 
+CREATE TABLE IF NOT exists `AcceptBidder`
+(
+	`productId`		 	bigint not null,
+    `bidderId` 			bigint not null,
+    `createdAt`			timestamp not null default now() ,
+    `status`			boolean not null default 1,
+    
+    PRIMARY KEY(`bidderId`,`productId`)  
+);
+
 CREATE TABLE IF NOT EXISTS `MessageToSeller`
 (
 	`id`				BIGINT,
@@ -178,10 +178,12 @@ CREATE TABLE IF NOT EXISTS `AuctionLog`
     PRIMARY KEY(`id`)
 );
 
-CREATE TABLE IF NOT EXISTS `BlockedBidder`
+CREATE TABLE IF NOT EXISTS `CurrentBidder`
 (
-	`bidderId`			BIGINT,
 	`productId`			BIGINT,
+	`bidderId`			BIGINT,
+    `isBlocked`         BOOLEAN NOT NULL DEFAULT FALSE,
+
 	`createdAt`			TIMESTAMP NOT NULL DEFAULT NOW(),
     
     PRIMARY KEY(`bidderId`, `productId`)
@@ -277,7 +279,7 @@ ADD FOREIGN KEY `FK_AL_B`(`bidderId`)
 ADD FOREIGN KEY `FK_AL_BP`(`productId`)
 	REFERENCES `BiddedProduct`(`id`);
     
-ALTER TABLE `BlockedBidder`
+ALTER TABLE `CurrentBidder`
 ADD FOREIGN KEY `FK_BB_B`(`bidderId`)
 	REFERENCES `Bidder`(`id`),
 ADD FOREIGN KEY `FK_BB_BP`(`productId`)

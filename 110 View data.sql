@@ -17,7 +17,7 @@ SELECT * FROM ProductImage;
 
 SELECT * FROM WatchListView;
 SELECT * FROM AuctionLog;
-SELECT * FROM BlockedBidder;
+SELECT * FROM CurrentBidder;
 
 SELECT * FROM MessageToSeller;
 SELECT * FROM MessageToBidder;

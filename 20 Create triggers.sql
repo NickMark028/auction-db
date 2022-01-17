@@ -37,46 +37,52 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS OnAfterInsertProduct; //
-CREATE TRIGGER OnAfterInsertProduct
-AFTER UPDATE ON Product
-FOR EACH ROW
-BEGIN
-
-END; //
-DELIMITER ;
-
-
-/*********************************************************/
-DELIMITER //
 DROP TRIGGER IF EXISTS OnBeforeInsertAuctionLog; //
 CREATE TRIGGER OnBeforeInsertAuctionLog
 BEFORE INSERT ON `AuctionLog`
 FOR EACH ROW
 BEGIN
-	-- Reject insert a price lower than the Product.reservedPrice
-	IF EXISTS(	SELECT	1
-				FROM	ProductView PV
-				WHERE	PV.id = NEW.productId AND PV.reservedPrice > NEW.price) THEN
-		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
-	END IF;
-
-	-- Reject insert a price lower than the Product.currentPrice + Product.priceStep if there is a top bidder
-	IF EXISTS(	SELECT	1
-				FROM	ProductView PV
-				WHERE	PV.id = NEW.productId AND NEW.price < IF(PV.currentPrice IS NULL, PV.reservedPrice, PV.currentPrice + PV.priceStep)) THEN
-		SIGNAL SQLSTATE '45000'
-		SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
-	END IF;
+	DECLARE minPrice FLOAT;
 
     -- Block new log in AuctionLog for those who is banned
 	IF EXISTS (	SELECT	1
-				FROM	BlockedBidder BB
-				WHERE	BB.bidderId = NEW.bidderId AND BB.productId = NEW.productId) THEN
+				FROM	CurrentBidder CB
+				WHERE	CB.productId = NEW.productId AND CB.bidderId = NEW.bidderId AND CB.isBlocked = TRUE) THEN
 		SIGNAL SQLSTATE '45000'
 		SET MESSAGE_TEXT = 'Bidder is banned';
     END IF;
+
+	-- If price > Product.instantPrice
+	-- IF (NEW.price >= (SELECT instantPrice FROM Product WHERE id = NEW.id LIMIT 1)) THEN
+
+	-- END IF;
+
+	SELECT	IF(topBidderID IS NULL, reservedPrice, currentPrice + priceStep)
+	INTO	minPrice
+	FROM	ProductView
+	WHERE	id = NEW.productId
+	LIMIT	1;
+
+	IF NEW.price < minPrice THEN 
+		SIGNAL SQLSTATE '45000'
+		SET MESSAGE_TEXT = 'The bidded price is smaller than the requirement';
+	END IF;
+
+	-- -- Reject insert a price lower than the Product.reservedPrice
+	-- IF EXISTS(	SELECT	1
+	-- 			FROM	ProductView PV
+	-- 			WHERE	PV.id = NEW.productId AND PV.reservedPrice > NEW.price) THEN
+	-- 	SIGNAL SQLSTATE '45000'
+	-- 	SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
+	-- END IF;
+
+	-- -- Reject insert a price lower than the Product.currentPrice + Product.priceStep if there is a top bidder
+	-- IF EXISTS(	SELECT	1
+	-- 			FROM	ProductView PV
+	-- 			WHERE	PV.id = NEW.productId AND NEW.price < IF(PV.currentPrice IS NULL, PV.reservedPrice, PV.currentPrice + PV.priceStep)) THEN
+	-- 	SIGNAL SQLSTATE '45000'
+	-- 	SET MESSAGE_TEXT = 'The price must be a minimum of the product reserved price';
+	-- END IF;
 END; //
 DELIMITER ;
 
@@ -91,35 +97,55 @@ BEGIN
 	DECLARE topBidderId BIGINT;
 	DECLARE topPrice FLOAT;
 
-	IF (SELECT BP.currentPrice FROM BiddedProduct BP WHERE BP.id = NEW.productId) IS NULL THEN
-		UPDATE	BiddedProduct BP
-		SET		BP.topBidderId = NEW.bidderId,
-				BP.currentPrice = NEW.price,
-				BP.auctionLogCount = 1,
-				BP.bidderCount = 1
-		WHERE	BP.id = NEW.productId;
+	-- Increase the number of `auctionLogCount` by 1
+	-- Count the number of `auctionLogCouut`
+	-- Update current price from BiddedProduct
+	-- Update top bidder from BiddedProduct
+	IF (SELECT BP.currentPrice FROM BiddedProduct BP WHERE BP.id = NEW.productId LIMIT 1) IS NULL THEN
+		-- First auction log
+		UPDATE	BiddedProduct
+		SET		topBidderId = NEW.bidderId,
+				currentPrice = NEW.price,
+				auctionLogCount = 1,
+				bidderCount = 1
+		WHERE	id = NEW.productId;
 	ELSE
-		-- Increase the number of `auctionLogCount` by 1
-		-- Count the number of `auctionLogCouut`
-		-- Update current price from BiddedProduct
-		-- Update top bidder from BiddedProduct
+		-- Non-first auction log
 		SELECT	MAX(AL.price)
 		INTO	topPrice
 		FROM	AuctionLog AL
-		WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+		JOIN	CurrentBidder CB ON AL.bidderId = CB.bidderId
+		WHERE	AL.productId = NEW.productId AND CB.productId = NEW.productId;
+		
+		-- SELECT	MAX(AL.price)
+		-- INTO	topPrice
+		-- FROM	AuctionLog AL
+		-- WHERE	 AND AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
 
-		SELECT	AL.bidderId
-		INTO	topBidderId
-		FROM	AuctionLog AL
-		WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId)
-        LIMIT	1;
+		SELECT	bidderId
+		INTO	topPrice
+		FROM	AuctionLog
+		WHERE	productId = NEW.productId AND price = topPrice
+		LIMIT	1;
+
+		-- SELECT	AL.bidderId
+		-- INTO	topBidderId
+		-- FROM	AuctionLog AL
+		-- WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId)
+        -- LIMIT	1;
 
 		UPDATE	BiddedProduct BP
-		SET		BP.bidderCount =  (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),
+		SET		BP.bidderCount = (SELECT COUNT(bidderId) FROM CurrentBidder WHERE productId = NEW.productId AND isBlocked = FALSE),
 				BP.auctionLogCount = BP.auctionLogCount + 1,
 				BP.topBidderId = topBidderId,
 				BP.currentPrice = topPrice
 		WHERE	NEW.productId = BP.id;    
+	END IF;
+
+	-- Add a new bidder to the CurrentBidder table
+	IF NOT EXISTS (SELECT 1 FROM CurrentBidder WHERE bidderId = NEW.bidderId AND productId = NEW.productId LIMIT 1) THEN
+		INSERT INTO CurrentBidder(bidderId, productId)
+		VALUE (NEW.bidderId, NEW.productId);
 	END IF;
 END; //
 DELIMITER ;
@@ -127,33 +153,34 @@ DELIMITER ;
 
 /*********************************************************/
 DELIMITER //
-DROP TRIGGER IF EXISTS OnAfterInsertBlockedBidder; //
-CREATE TRIGGER OnAfterInsertBlockedBidder
-AFTER INSERT ON `BlockedBidder`
+DROP TRIGGER IF EXISTS OnAfterUpdateCurrentBidder; //
+CREATE TRIGGER OnAfterUpdateCurrentBidder
+AFTER INSERT ON `CurrentBidder`
 FOR EACH ROW
 BEGIN
 	DECLARE topBidderId BIGINT;
 	DECLARE topPrice FLOAT;
 
-	-- Increase the number of `auctionLogCount` by 1
-	-- Count the number of `auctionLogCout`
-	-- Update current price from BiddedProduct
-	-- Update top bidder from BiddedProduct
-	SELECT	MAX(AL.price)
-	INTO	topPrice
-	FROM	AuctionLog AL
-	WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+	IF NEW.isBlocked = TRUE THEN
+		SELECT	MAX(AL.price)
+		INTO	topPrice
+		FROM	AuctionLog AL
+		JOIN	CurrentBidder CB ON AL.bidderId = CB.bidderId
+		WHERE	AL.productId = NEW.productId AND CB.productId = NEW.productId;
 
-	SELECT	AL.bidderId
-	INTO	topBidderId
-	FROM	AuctionLog AL
-	WHERE	AL.bidderId NOT IN (SELECT bidderId FROM BlockedBidder BB WHERE BB.productId = NEW.productId);
+		SELECT	bidderId
+		INTO	topPrice
+		FROM	AuctionLog
+		WHERE	productId = NEW.productId AND price = topPrice
+		LIMIT	1;
 
-	UPDATE	BiddedProduct BP
-	SET		BP.bidderCount = (SELECT COUNT(DISTINCT AC.`bidderId`) FROM `AuctionLog` AC),	-- Only select non-blocked bidder 
-			BP.topBidderId = topBidderId,
-			BP.currentPrice = topPrice
-	WHERE	NEW.productId = BP.id;    
+		UPDATE	BiddedProduct BP
+		SET		BP.bidderCount = (SELECT COUNT(bidderId) FROM CurrentBidder WHERE productId = NEW.productId AND isBlocked = FALSE),
+				BP.auctionLogCount = BP.auctionLogCount + 1,
+				BP.topBidderId = topBidderId,
+				BP.currentPrice = topPrice
+		WHERE	NEW.productId = BP.id;    
+	END IF;
 END; //
 DELIMITER ;
 
