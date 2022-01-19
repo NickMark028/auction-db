@@ -54,6 +54,15 @@ AS
     WHERE	WL.isDeleted = FALSE;
 -- SELECT * FROM WatchListView;
 
+
+DROP VIEW IF EXISTS BidHistoryView;
+CREATE VIEW BidHistoryView
+AS
+	SELECT		AL.*,BV.firstName,BV.lastName
+	FROM		auctionlog AL
+    JOIN		user BV ON Al.bidderId = BV.id;
+-- SELECT * FROM BidHistoryView;
+
     
 /* ---------------------------------------------------------------------------------------- */
 
@@ -65,7 +74,7 @@ AS
 				C.section, C.`name` AS categoryName, C.`path` AS categoryPath,
 				IF (PV.topBidderId IS NULL, NULL, JSON_OBJECT('firstName', BV.firstName, 'lastName', BV.lastName)) AS topBidder
 	FROM		ProductView PV
-	JOIN		ProductCategory PC ON PV.id = PC.productId
+	LEFT JOIN	ProductCategory PC ON PV.id = PC.productId
 	LEFT JOIN	BidderView BV ON BV.id = PV.topBidderId
 	JOIN		SellerView SV ON SV.id = PV.sellerId
 	JOIN		Category C ON PC.categoryId = C.id;
@@ -81,14 +90,5 @@ AS
 	JOIN		Bidder B ON B.id = QPV.sellerId
     GROUP BY 	QPV.id;
 -- SELECT * FROM QueryProductDetailView;
-
-
-DROP VIEW IF EXISTS BidHistoryView;
-CREATE VIEW BidHistoryView
-AS
-	SELECT		AL.*,BV.firstName,BV.lastName
-	FROM		auctionlog AL
-    JOIN		user BV ON Al.bidderId = BV.id;
--- SELECT * FROM BidHistoryView;
 
 

@@ -128,3 +128,23 @@ END; //
 DELIMITER ;
 
 
+/*********************************************************/
+/* C
+	Return if the product is still availiable
+ */
+/*********************************************************/
+DELIMITER //
+DROP FUNCTION IF EXISTS `CalculateMinPrice`; //
+CREATE FUNCTION `CalculateMinPrice`
+(
+	_reservedPrice			FLOAT,
+	_currentPrice			FLOAT
+)
+RETURNS FLOAT
+DETERMINISTIC
+BEGIN
+	RETURN IF(_currentPrice IS NULL, _reservedPrice, _currentPrice);
+END; //
+DELIMITER ;
+
+
