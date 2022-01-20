@@ -18,9 +18,9 @@ GROUP BY	C.section;
 -- Search product
 SELECT	*
 FROM	  	QueryProductView
-WHERE		MATCH(name) AGAINST('điện thoại' IN BOOLEAN MODE); AND categoryPath = 'laptop'
+WHERE		MATCH(name) AGAINST('điện thoại' IN BOOLEAN MODE) AND categoryPath = 'laptop'
 ORDER BY	timeExpired ASC, currentPrice DESC
-LIMIT		0 * 20, 20;
+LIMIT		0, 20;
 
 -- Get watch list
 SELECT		PV.*, WLV.createdAt AS dateFavorited

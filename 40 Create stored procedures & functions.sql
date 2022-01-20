@@ -129,7 +129,7 @@ DELIMITER ;
 
 
 /*********************************************************/
-/* C
+/* CalculateMinPrice
 	Return if the product is still availiable
  */
 /*********************************************************/
