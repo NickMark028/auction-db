@@ -6,10 +6,10 @@ This is a smaller part of the full project called Aution Only. Auction Only is a
 For the full solution, visit:
 - Front end: https://github.com/NickMark028/auction-fe
 - Back end: https://github.com/NickMark028/auction-be
-- Database https://github.com/NickMark028/auction-db
+- Database: https://github.com/NickMark028/auction-db
 
 ### Prerequisite
-- MySql Workbench 8.0 is installed
+- MySQL v8.0.22 or higher.
 
 ### Installation
 Run these following script in order:
